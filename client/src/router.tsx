@@ -6,6 +6,8 @@ import Layout from "./Layout";
 import Chat from "./Chat";
 import Character from "./Character";
 import DiscordSettings from "@/components/discord/DiscordSettings";
+import ClaimRole from "./ClaimRole"; // Add this import
+
 
 
 export const router = createBrowserRouter([
@@ -32,6 +34,10 @@ export const router = createBrowserRouter([
             {
               path: "discord-settings",
               element: <DiscordSettings />
+            },
+            {
+                path: "claim-role", // Add this new route
+                element: <ClaimRole />
             }
         ],
     },

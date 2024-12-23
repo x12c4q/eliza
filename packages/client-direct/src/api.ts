@@ -32,7 +32,7 @@ export function createApiRouter(
     });
 
     router.get("/hello", (req, res) => {
-        res.json({ message: "Hello World!" });
+        res.json({ message: "Hello Worlds!" });
     });
 
     router.get("/agents", (req, res) => {
@@ -120,6 +120,41 @@ export function createApiRouter(
             res.status(500).json({ error: "Failed to fetch guilds" });
         }
     });
+
+    router.post("/claim-role", async (req, res) => {
+      console.log("Received claim-role request:", req.body);
+      try {
+        const { walletAddress, signature, message } = req.body;
+
+        // Validate required fields
+        if (!walletAddress || !signature || !message) {
+          return res.status(400).json({
+            success: false,
+            error: "Missing required fields"
+          });
+        }
+
+        // Your role claiming logic here
+        // ...
+
+        // Always return a proper JSON response
+        return res.json({
+          success: true,
+          message: "Role claimed successfully"
+        });
+
+      } catch (error) {
+        console.log("Received claim-role request:", req.body);
+        console.error('Error claiming role:', error);
+        return res.status(500).json({
+          success: false,
+          error: "Failed to claim role"
+        });
+      }
+    });
+
+
+
 
     return router;
 }
