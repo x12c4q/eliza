@@ -1,4 +1,4 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
+import { Calendar, Home, Inbox, Search, Settings,  UserPlus } from "lucide-react";
 import { useParams } from "react-router-dom";
 
 import {
@@ -24,6 +24,16 @@ const items = [
         title: "Character Overview",
         url: "character",
         icon: Calendar,
+    },
+    {
+        title: "Discord Settings",
+        url: "discord-settings",
+        icon: Settings, // Import Settings from lucide-react if not already imported
+    },
+    {
+        title: "Claim Role",  // Add new item
+        url: "claim-role",
+        icon: UserPlus,
     },
 ];
 

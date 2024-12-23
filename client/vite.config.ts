@@ -27,7 +27,8 @@ export default defineConfig({
         },
     },
     server: {
-        proxy: {
+      host: '0.0.0.0',  // Added this line to listen on all network interfaces
+      proxy: {
             "/api": {
                 target: `http://localhost:${process.env.SERVER_PORT || 3000}`,
                 changeOrigin: true,
