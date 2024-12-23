@@ -16,6 +16,9 @@ export default defineConfig({
         "http",
         "agentkeepalive",
         "safe-buffer",
+        "crypto",
+        "tweetnacl",
+        "express"
         // Add other modules you want to externalize
     ],
 });

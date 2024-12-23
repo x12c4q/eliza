@@ -2,20 +2,25 @@ import { useState } from "react";
 import { useWallet } from "@solana/wallet-adapter-react";
 import bs58 from "bs58";
 import { Button } from "./ui/button";
+import { Input } from "./ui/input"; // Add this import
 import { Buffer } from 'buffer'; // Add this import
 
-// Add this line at the top of the file after imports
-window.Buffer = window.Buffer || Buffer;
 
 export function ClaimRole() {
   const { publicKey, signMessage } = useWallet();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
+  const [discordUsername, setDiscordUsername] = useState(""); // Add this state
 
   const handleClaimRole = async () => {
     if (!publicKey || !signMessage) {
       setError("Please connect your wallet first");
+      return;
+    }
+
+    if (!discordUsername) {
+      setError("Please enter your Discord username");
       return;
     }
 
@@ -25,9 +30,8 @@ export function ClaimRole() {
 
     try {
       // Create message to sign
-      const message = new TextEncoder().encode(
-        `Verify wallet ownership for Discord role claim\nWallet: ${publicKey.toBase58()}\nTimestamp: ${Date.now()}`
-      );
+      const messageText = `Verify Discord username: ${discordUsername}\nWallet: ${publicKey.toBase58()}\nTimestamp: ${Date.now()}`;
+      const message = new TextEncoder().encode(messageText);
 
       // Request signature
       const signature = await signMessage(message);
@@ -41,44 +45,42 @@ export function ClaimRole() {
         body: JSON.stringify({
           walletAddress: publicKey.toBase58(),
           signature: bs58.encode(signature),
-          message: Buffer.from(message).toString("base64"),
+          message: Buffer.from(message).toString('base64'),
+          discordUsername: discordUsername
         }),
       });
 
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || "Failed to claim role");
+        throw new Error(data.error || "Failed to verify");
       }
 
       setSuccess(true);
     } catch (error) {
-      console.error("Error claiming role:", error);
-      setError(error instanceof Error ? error.message : "Failed to claim role");
+      console.error("Error:", error);
+      setError(error instanceof Error ? error.message : "Failed to verify");
     } finally {
       setIsLoading(false);
     }
   };
 
   return (
-    <div className="flex flex-col items-center gap-4">
+    <div className="flex flex-col gap-4">
+      <Input
+        type="text"
+        placeholder="Enter Discord username"
+        value={discordUsername}
+        onChange={(e) => setDiscordUsername(e.target.value)}
+      />
       <Button
         onClick={handleClaimRole}
-        disabled={!publicKey || isLoading}
-        className="w-full max-w-xs"
+        disabled={!publicKey || isLoading || !discordUsername}
       >
-        {isLoading ? "Claiming..." : "Claim Discord Role"}
+        {isLoading ? "Verifying..." : "Verify Discord Username"}
       </Button>
-
-      {error && (
-        <p className="text-red-500 text-sm">{error}</p>
-      )}
-
-      {success && (
-        <p className="text-green-500 text-sm">
-          Role claimed successfully! Please check your Discord.
-        </p>
-      )}
+      {error && <p className="text-red-500">{error}</p>}
+      {success && <p className="text-green-500">Successfully verified!</p>}
     </div>
   );
 }

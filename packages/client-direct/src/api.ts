@@ -1,6 +1,10 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
+import nacl from 'tweetnacl';
+import bs58 from 'bs58'
+import { PublicKey } from '@solana/web3.js';
+
 
 import {
     AgentRuntime,
@@ -11,6 +15,8 @@ import {
 
 import { REST, Routes } from "discord.js";
 import { DirectClient } from ".";
+// import { Buffer } from 'buffer'; // Add this import
+
 
 export function createApiRouter(
     agents: Map<string, AgentRuntime>,
@@ -32,6 +38,10 @@ export function createApiRouter(
     });
 
     router.get("/hello", (req, res) => {
+        res.json({ message: "Hello Worlds!" });
+    });
+
+    router.get("/trigger2", (req, res) => {
         res.json({ message: "Hello Worlds!" });
     });
 
@@ -119,40 +129,69 @@ export function createApiRouter(
             console.error("Error fetching guilds:", error);
             res.status(500).json({ error: "Failed to fetch guilds" });
         }
-    });
+  });
 
-    router.post("/claim-role", async (req, res) => {
-      console.log("Received claim-role request:", req.body);
-      try {
-        const { walletAddress, signature, message } = req.body;
+  router.post("/claim-role", async (req, res) => {
+      const { walletAddress, signature, message, discordUsername } = req.body;
 
-        // Validate required fields
-        if (!walletAddress || !signature || !message) {
+      // Validate inputs
+      if (!walletAddress || !signature || !message || !discordUsername) {
           return res.status(400).json({
-            success: false,
-            error: "Missing required fields"
+              success: false,
+              error: "Missing required fields"
           });
-        }
+      }
 
-        // Your role claiming logic here
-        // ...
+      try {
+          // Make sure nacl is properly imported
+          if (!nacl || !nacl.sign || !nacl.sign.detached) {
+              throw new Error('Nacl library not properly initialized');
+          }
 
-        // Always return a proper JSON response
-        return res.json({
-          success: true,
-          message: "Role claimed successfully"
-        });
+          // Decode the base64 message back to Uint8Array
+          const decodedMessage = new Uint8Array(Buffer.from(message, 'base64'));
+
+          // Decode the signature from base58
+          const signedMessage = bs58.decode(signature);
+
+          // Decode the wallet address from base58 to get the public key bytes
+          const publicKeyBytes = bs58.decode(walletAddress);
+
+          console.log('Verification details:', {
+              messageLength: decodedMessage.length,
+              signatureLength: signedMessage.length,
+              publicKeyLength: publicKeyBytes.length,
+              originalMessage: Buffer.from(decodedMessage).toString(),
+          });
+
+          const verified = nacl.sign.detached.verify(
+              decodedMessage,      // the original message bytes
+              signedMessage,       // the signature bytes
+              publicKeyBytes       // the public key bytes
+          );
+
+          console.log(`Signature verification result: ${verified}`);
+
+          if (!verified) {
+              return res.status(400).json({
+                  success: false,
+                  error: "Invalid signature"
+              });
+          }
+
+          return res.json({
+              success: true,
+              message: "Signature verified successfully"
+          });
 
       } catch (error) {
-        console.log("Received claim-role request:", req.body);
-        console.error('Error claiming role:', error);
-        return res.status(500).json({
-          success: false,
-          error: "Failed to claim role"
-        });
+          console.error('Error verifying signature:', error);
+          return res.status(400).json({
+              success: false,
+              error: "Signature verification failed: " + error.message
+          });
       }
-    });
-
+  });
 
 
 

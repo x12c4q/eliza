@@ -54,6 +54,7 @@
         "@0glabs/0g-ts-sdk": "0.2.1",
         "@coinbase/coinbase-sdk": "0.10.0",
         "@deepgram/sdk": "^3.9.0",
+        "@noble/ed25519": "^2.1.0",
         "@solana/wallet-adapter-base": "^0.9.23",
         "@solana/wallet-adapter-react": "^0.15.35",
         "@solana/wallet-adapter-react-ui": "^0.9.35",
@@ -66,7 +67,8 @@
         "optional": "0.1.4",
         "pnpm": "9.14.4",
         "sharp": "0.33.5",
-        "tslog": "4.9.3"
+        "tslog": "4.9.3",
+        "tweetnacl": "^1.0.3"
     },
     "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee",
     "workspaces": [
