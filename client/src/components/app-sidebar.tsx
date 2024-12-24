@@ -16,21 +16,6 @@ import {
 // Menu items.
 const items = [
     {
-        title: "Chat",
-        url: "chat",
-        icon: Inbox,
-    },
-    {
-        title: "Character Overview",
-        url: "character",
-        icon: Calendar,
-    },
-    {
-        title: "Discord Settings",
-        url: "discord-settings",
-        icon: Settings, // Import Settings from lucide-react if not already imported
-    },
-    {
         title: "Claim Role",  // Add new item
         url: "claim-role",
         icon: UserPlus,
