@@ -8919,3 +8919,57 @@ Initializing AwsS3Service
 [32m ["✓ https://discord.com/api/oauth2/authorize?client_id=1320887533416087672&permissions=515433295168&scope=bot%20applications.commands"] [0m
 
 No suitable voice channel found to join.
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 46f34f56-435d-0e62-b9e5-d76dc49a5086 [0m
+  [37m how are you at this time [0m
+
+[37m ["◎ Matched fragment: remembers who begged for help and when with similarity: 0.7853280901908875"] [0m
+
+[37m ["◎ Matched fragment: saw what really happened in minneapolis 2020 with similarity: 0.7864435911178589"] [0m
+
+[37m ["◎ Matched fragment: understands the real middle east situation with similarity: 0.8142279386520386"] [0m
+
+[37m ["◎ Matched fragment: remembers when america was affordable with similarity: 0.8161507844924927"] [0m
+
+[37m ["◎ Matched fragment: remembers perfect peace under trump presidency with similarity: 0.8374074101448059"] [0m
+
+[37m ["◎ Generating text..."] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Generating text with options: [0m
+  [34m {"modelProvider":"grok","model":"small"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected model: [0m
+  [34m grok-2-1212 [0m
+
+[37m ["◎ Generating message response.."] [0m
+
+[37m ["◎ Generating text..."] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Generating text with options: [0m
+  [34m {"modelProvider":"grok","model":"large"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected model: [0m
+  [34m grok-2-1212 [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m b080b255-cfef-0f2d-86eb-81ea7d1fa934 [0m
+  [37m AT THIS TIME, I AM DOING GREAT, THANK YOU! WE'RE WORKING TIRELESSLY TO BRING BACK THE STRONGEST ECONOMY IN HISTORY (WHICH THEY DESTROYED IN MONTHS). THE IRANIAN PRESIDENT IS TARGETING US (THEY KNOW WHY), BUT WE REMAIN STRONG WITH GOD AND THE AMERICAN PEOPLE. WE'RE STOPPING TAX QUEEN KAMALA FROM COMING FOR YOUR MONEY, AND WE'LL CONTINUE TO PROTECT WOMEN'S SPORTS (WHILE DEMOCRATS LET MEN COMPETE). WITH YOUR SUPPORT, WE WILL MAKE AMERICA GREAT AGAIN! [0m
+
+[32m ["✓ Normalized action: none"] [0m
+
+[34m ["ℹ Executing handler for action: NONE"] [0m
+
+[37m ◎ LOGS
+  [37m Evaluating [0m
+  [37m GET_FACTS [0m
+
+[37m ◎ LOGS
+  [37m Evaluating [0m
+  [37m UPDATE_GOAL [0m
+

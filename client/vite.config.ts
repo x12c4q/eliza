@@ -30,7 +30,7 @@ export default defineConfig({
       host: '0.0.0.0',  // Added this line to listen on all network interfaces
       proxy: {
             "/api": {
-                target: `http://localhost:${process.env.SERVER_PORT || 3000}`,
+                target: process.env.VITE_API_URL || `http://localhost:${process.env.SERVER_PORT || 3000}`,
                 changeOrigin: true,
                 rewrite: (path) => path.replace(/^\/api/, ""),
             },
