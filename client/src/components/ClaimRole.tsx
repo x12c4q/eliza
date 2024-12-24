@@ -57,6 +57,7 @@ export function ClaimRole() {
       }
 
       setSuccess(true);
+      alert("Role successfully assigned! You can now chat with the bot.");
     } catch (error) {
       console.error("Error:", error);
       setError(error instanceof Error ? error.message : "Failed to verify");

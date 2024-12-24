@@ -1,3 +1,4 @@
+import * as fs from "fs";
 import bodyParser from "body-parser";
 import cors from "cors";
 import express, { Request as ExpressRequest } from "express";
@@ -17,7 +18,6 @@ import {
 import { stringToUuid } from "@elizaos/core";
 import { settings } from "@elizaos/core";
 import { createApiRouter } from "./api.ts";
-import * as fs from "fs";
 import * as path from "path";
 const upload = multer({ storage: multer.memoryStorage() });
 

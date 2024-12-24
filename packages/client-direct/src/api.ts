@@ -4,6 +4,7 @@ import cors from "cors";
 import nacl from 'tweetnacl';
 import bs58 from 'bs58'
 import { PublicKey } from '@solana/web3.js';
+import { cache } from './cache';
 
 
 import {
@@ -169,6 +170,48 @@ export function createApiRouter(
               signedMessage,       // the signature bytes
               publicKeyBytes       // the public key bytes
           );
+
+          if (verified) {
+              try {
+                  // 1. Get Discord client/guild
+                  const API_TOKEN = getEnvVariable("DISCORD_API_TOKEN");
+                  const GUILD_ID = getEnvVariable("DISCORD_GUILD_ID");
+                  const ROLE_ID = getEnvVariable("DISCORD_ROLE_ID");
+
+                  const rest = new REST({ version: "10" }).setToken(API_TOKEN);
+
+                  // 2. Find the user in the guild
+                  const guild = await rest.get(Routes.guild(GUILD_ID));
+                  const members = await rest.get(Routes.guildMembers(GUILD_ID));
+                  const member = members.find(m => m.user.username === discordUsername);
+
+                  if (!member) {
+                      return res.status(404).json({
+                          success: false,
+                          error: "User not found in Discord server"
+                      });
+                  }
+
+                  // 3. Assign the role
+                  await rest.put(Routes.guildMemberRole(GUILD_ID, member.user.id, ROLE_ID));
+
+                  // 4. Store the wallet-discord mapping using cache instead of fs
+                  await cache.set(`wallet_${walletAddress}`, member.user.id);
+
+                  return res.json({
+                      success: true,
+                      message: "Role assigned successfully"
+                  });
+              } catch (error) {
+                  console.error('Error assigning role:', error);
+                  return res.status(500).json({
+                      success: false,
+                      error: "Failed to assign role"
+                  });
+              }
+          }
+
+
 
           console.log(`Signature verification result: ${verified}`);
 

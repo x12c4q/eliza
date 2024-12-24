@@ -6447,3 +6447,2275 @@ Exit status 137
 Killed
  ELIFECYCLE  Command failed with exit code 137.
  ELIFECYCLE  Command failed with exit code 137.
+ WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.15.1"})
+
+> eliza@ start /workspace/eliza
+> pnpm --filter "@elizaos/agent" start --isRoot "--character=characters/trump.character.json"
+
+.                                        |  WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.14.4"})
+docs                                     |  WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.14.4"})
+
+> @elizaos/agent@0.1.7-alpha.1 start /workspace/eliza/agent
+> node --loader ts-node/esm src/index.ts "--isRoot" "--character=characters/trump.character.json"
+
+(node:53590) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:53590) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[ElizaLogger] Initializing with:
+            isNode: true
+            verbose: false
+            VERBOSE env: undefined
+            NODE_ENV: undefined
+        
+[34m ℹ INFORMATIONS
+  [34m Loading embedding settings: [0m
+  [34m {"USE_OPENAI_EMBEDDING":"","USE_OLLAMA_EMBEDDING":"","OLLAMA_EMBEDDING_MODEL":"mxbai-embed-large"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Loading character settings: [0m
+  [34m {"ARGV":["/root/.nvm/versions/node/v23.5.0/bin/node","/workspace/eliza/agent/src/index.ts","--isRoot","--character=characters/trump.character.json"],"CHARACTER_ARG":"--character=characters/trump.character.json","CWD":"/workspace/eliza/agent"} [0m
+
+Loaded .env file from: /workspace/eliza/.env
+[34m ℹ INFORMATIONS
+  [34m Parsed settings: [0m
+  [34m {"USE_OPENAI_EMBEDDING":"","USE_OPENAI_EMBEDDING_TYPE":"string","USE_OLLAMA_EMBEDDING":"","USE_OLLAMA_EMBEDDING_TYPE":"string","OLLAMA_EMBEDDING_MODEL":"mxbai-embed-large"} [0m
+
+(node:53590) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+[37m ["◎ DirectClient constructor"] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Trying paths: [0m
+  [34m [{"path":"characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/src/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/src/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/characters/trump.character.json","exists":true}] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Plugins are:  [0m
+  [34m [] [0m
+
+[34m ["ℹ Successfully loaded character from: /workspace/eliza/characters/trump.character.json"] [0m
+
+[37m ["◎ sqlite-vec extensions loaded successfully."] [0m
+
+[34m ["ℹ Using Database Cache..."] [0m
+
+[32m ✓ SUCCESS
+  [32m SUCCESS [0m
+  [32m Creating runtime for character [0m
+  [32m trump [0m
+
+[34m ℹ INFORMATIONS
+  [34m Initializing AgentRuntime with options: [0m
+  [34m {"character":"trump","modelProvider":"openai","characterModelProvider":"openai"} [0m
+
+[32m ✓ SUCCESS
+  [32m Agent ID [0m
+  [32m e0e10e6f-ff2b-0d4c-8011-1fc1eee7cb32 [0m
+
+[34m ["ℹ Setting model provider..."] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Model Provider Selection: [0m
+  [34m {"characterModelProvider":"openai","optsModelProvider":"openai","finalSelection":"openai"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected model provider: [0m
+  [34m openai [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected image model provider: [0m
+  [34m openai [0m
+
+[32m ["✓ Registering action: CONTINUE"] [0m
+
+[32m ["✓ Registering action: FOLLOW_ROOM"] [0m
+
+[32m ["✓ Registering action: UNFOLLOW_ROOM"] [0m
+
+[32m ["✓ Registering action: IGNORE"] [0m
+
+[32m ["✓ Registering action: NONE"] [0m
+
+[32m ["✓ Registering action: MUTE_ROOM"] [0m
+
+[32m ["✓ Registering action: UNMUTE_ROOM"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m browser [0m
+
+[32m ["✓ Service browser registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m image_description [0m
+
+[32m ["✓ Service image_description registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m text_generation [0m
+
+[32m ["✓ Service text_generation registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m pdf [0m
+
+[32m ["✓ Service pdf registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m speech_generation [0m
+
+[32m ["✓ Service speech_generation registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m transcription [0m
+
+[32m ["✓ Service transcription registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m video [0m
+
+[32m ["✓ Service video registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m aws_s3 [0m
+
+[32m ["✓ Service aws_s3 registered successfully"] [0m
+
+[32m ["✓ Service browser initialized successfully"] [0m
+
+Initializing ImageDescriptionService
+[32m ["✓ Service image_description initialized successfully"] [0m
+
+[34m ["ℹ Initializing LlamaService..."] [0m
+
+[32m ["✓ Service text_generation initialized successfully"] [0m
+
+[32m ["✓ Service pdf initialized successfully"] [0m
+
+[32m ["✓ Service speech_generation initialized successfully"] [0m
+
+[32m ["✓ Service transcription initialized successfully"] [0m
+
+[32m ["✓ Service video initialized successfully"] [0m
+
+Initializing AwsS3Service
+[32m ["✓ Service aws_s3 initialized successfully"] [0m
+
+Initializing ImageDescriptionService
+[34m ["ℹ Initializing LlamaService..."] [0m
+
+Initializing AwsS3Service
+[37m ◎ LOGS
+  [37m initializeClients [0m
+  [37m [] [0m
+  [37m for [0m
+  [37m trump [0m
+
+[37m ◎ LOGS
+  [37m client keys [0m
+  [37m [] [0m
+
+[37m ["◎ Run `pnpm start:client` to start the client and visit the outputted URL (http://localhost:5173) to chat with your agents"] [0m
+
+[32m ["✓ REST API bound to 0.0.0.0:3000. If running locally, access it at http://localhost:3000."] [0m
+
+Killed
+/workspace/eliza/agent:
+ ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @elizaos/agent@0.1.7-alpha.1 start: `node --loader ts-node/esm src/index.ts "--isRoot" "--character=characters/trump.character.json"`
+Exit status 137
+ ELIFECYCLE  Command failed with exit code 137.
+ WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.15.1"})
+
+> eliza@ start /workspace/eliza
+> pnpm --filter "@elizaos/agent" start --isRoot "--character=characters/trump.character.json"
+
+.                                        |  WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.14.4"})
+docs                                     |  WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.14.4"})
+
+> @elizaos/agent@0.1.7-alpha.1 start /workspace/eliza/agent
+> node --loader ts-node/esm src/index.ts "--isRoot" "--character=characters/trump.character.json"
+
+(node:54581) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:54581) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[ElizaLogger] Initializing with:
+            isNode: true
+            verbose: false
+            VERBOSE env: undefined
+            NODE_ENV: undefined
+        
+[34m ℹ INFORMATIONS
+  [34m Loading embedding settings: [0m
+  [34m {"USE_OPENAI_EMBEDDING":"","USE_OLLAMA_EMBEDDING":"","OLLAMA_EMBEDDING_MODEL":"mxbai-embed-large"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Loading character settings: [0m
+  [34m {"ARGV":["/root/.nvm/versions/node/v23.5.0/bin/node","/workspace/eliza/agent/src/index.ts","--isRoot","--character=characters/trump.character.json"],"CHARACTER_ARG":"--character=characters/trump.character.json","CWD":"/workspace/eliza/agent"} [0m
+
+Loaded .env file from: /workspace/eliza/.env
+[34m ℹ INFORMATIONS
+  [34m Parsed settings: [0m
+  [34m {"USE_OPENAI_EMBEDDING":"","USE_OPENAI_EMBEDDING_TYPE":"string","USE_OLLAMA_EMBEDDING":"","USE_OLLAMA_EMBEDDING_TYPE":"string","OLLAMA_EMBEDDING_MODEL":"mxbai-embed-large"} [0m
+
+(node:54581) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+[37m ["◎ DirectClient constructor"] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Trying paths: [0m
+  [34m [{"path":"characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/src/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/src/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/characters/trump.character.json","exists":true}] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Plugins are:  [0m
+  [34m [] [0m
+
+[34m ["ℹ Successfully loaded character from: /workspace/eliza/characters/trump.character.json"] [0m
+
+[37m ["◎ sqlite-vec extensions loaded successfully."] [0m
+
+[34m ["ℹ Using Database Cache..."] [0m
+
+[32m ✓ SUCCESS
+  [32m SUCCESS [0m
+  [32m Creating runtime for character [0m
+  [32m trump [0m
+
+[34m ℹ INFORMATIONS
+  [34m Initializing AgentRuntime with options: [0m
+  [34m {"character":"trump","modelProvider":"openai","characterModelProvider":"openai"} [0m
+
+[32m ✓ SUCCESS
+  [32m Agent ID [0m
+  [32m e0e10e6f-ff2b-0d4c-8011-1fc1eee7cb32 [0m
+
+[34m ["ℹ Setting model provider..."] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Model Provider Selection: [0m
+  [34m {"characterModelProvider":"openai","optsModelProvider":"openai","finalSelection":"openai"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected model provider: [0m
+  [34m openai [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected image model provider: [0m
+  [34m openai [0m
+
+[32m ["✓ Registering action: CONTINUE"] [0m
+
+[32m ["✓ Registering action: FOLLOW_ROOM"] [0m
+
+[32m ["✓ Registering action: UNFOLLOW_ROOM"] [0m
+
+[32m ["✓ Registering action: IGNORE"] [0m
+
+[32m ["✓ Registering action: NONE"] [0m
+
+[32m ["✓ Registering action: MUTE_ROOM"] [0m
+
+[32m ["✓ Registering action: UNMUTE_ROOM"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m browser [0m
+
+[32m ["✓ Service browser registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m image_description [0m
+
+[32m ["✓ Service image_description registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m text_generation [0m
+
+[32m ["✓ Service text_generation registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m pdf [0m
+
+[32m ["✓ Service pdf registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m speech_generation [0m
+
+[32m ["✓ Service speech_generation registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m transcription [0m
+
+[32m ["✓ Service transcription registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m video [0m
+
+[32m ["✓ Service video registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m aws_s3 [0m
+
+[32m ["✓ Service aws_s3 registered successfully"] [0m
+
+[32m ["✓ Service browser initialized successfully"] [0m
+
+Initializing ImageDescriptionService
+[32m ["✓ Service image_description initialized successfully"] [0m
+
+[34m ["ℹ Initializing LlamaService..."] [0m
+
+[32m ["✓ Service text_generation initialized successfully"] [0m
+
+[32m ["✓ Service pdf initialized successfully"] [0m
+
+[32m ["✓ Service speech_generation initialized successfully"] [0m
+
+[32m ["✓ Service transcription initialized successfully"] [0m
+
+[32m ["✓ Service video initialized successfully"] [0m
+
+Initializing AwsS3Service
+[32m ["✓ Service aws_s3 initialized successfully"] [0m
+
+Initializing ImageDescriptionService
+[34m ["ℹ Initializing LlamaService..."] [0m
+
+Initializing AwsS3Service
+[37m ◎ LOGS
+  [37m initializeClients [0m
+  [37m [] [0m
+  [37m for [0m
+  [37m trump [0m
+
+[37m ◎ LOGS
+  [37m client keys [0m
+  [37m [] [0m
+
+[37m ["◎ Run `pnpm start:client` to start the client and visit the outputted URL (http://localhost:5173) to chat with your agents"] [0m
+
+[32m ["✓ REST API bound to 0.0.0.0:3000. If running locally, access it at http://localhost:3000."] [0m
+
+Killed
+/workspace/eliza/agent:
+ ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @elizaos/agent@0.1.7-alpha.1 start: `node --loader ts-node/esm src/index.ts "--isRoot" "--character=characters/trump.character.json"`
+Exit status 137
+ ELIFECYCLE  Command failed with exit code 137.
+ WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.15.1"})
+
+> eliza@ start /workspace/eliza
+> pnpm --filter "@elizaos/agent" start --isRoot "--character=characters/trump.character.json"
+
+.                                        |  WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.14.4"})
+docs                                     |  WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.14.4"})
+
+> @elizaos/agent@0.1.7-alpha.1 start /workspace/eliza/agent
+> node --loader ts-node/esm src/index.ts "--isRoot" "--character=characters/trump.character.json"
+
+(node:54955) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:54955) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[ElizaLogger] Initializing with:
+            isNode: true
+            verbose: false
+            VERBOSE env: undefined
+            NODE_ENV: undefined
+        
+[34m ℹ INFORMATIONS
+  [34m Loading embedding settings: [0m
+  [34m {"USE_OPENAI_EMBEDDING":"","USE_OLLAMA_EMBEDDING":"","OLLAMA_EMBEDDING_MODEL":"mxbai-embed-large"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Loading character settings: [0m
+  [34m {"ARGV":["/root/.nvm/versions/node/v23.5.0/bin/node","/workspace/eliza/agent/src/index.ts","--isRoot","--character=characters/trump.character.json"],"CHARACTER_ARG":"--character=characters/trump.character.json","CWD":"/workspace/eliza/agent"} [0m
+
+Loaded .env file from: /workspace/eliza/.env
+[34m ℹ INFORMATIONS
+  [34m Parsed settings: [0m
+  [34m {"USE_OPENAI_EMBEDDING":"","USE_OPENAI_EMBEDDING_TYPE":"string","USE_OLLAMA_EMBEDDING":"","USE_OLLAMA_EMBEDDING_TYPE":"string","OLLAMA_EMBEDDING_MODEL":"mxbai-embed-large"} [0m
+
+(node:54955) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+[37m ["◎ DirectClient constructor"] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Trying paths: [0m
+  [34m [{"path":"characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/src/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/src/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/characters/trump.character.json","exists":true}] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Plugins are:  [0m
+  [34m [] [0m
+
+[34m ["ℹ Successfully loaded character from: /workspace/eliza/characters/trump.character.json"] [0m
+
+[37m ["◎ sqlite-vec extensions loaded successfully."] [0m
+
+[34m ["ℹ Using Database Cache..."] [0m
+
+[32m ✓ SUCCESS
+  [32m SUCCESS [0m
+  [32m Creating runtime for character [0m
+  [32m trump [0m
+
+[34m ℹ INFORMATIONS
+  [34m Initializing AgentRuntime with options: [0m
+  [34m {"character":"trump","modelProvider":"grok","characterModelProvider":"grok"} [0m
+
+[32m ✓ SUCCESS
+  [32m Agent ID [0m
+  [32m e0e10e6f-ff2b-0d4c-8011-1fc1eee7cb32 [0m
+
+[34m ["ℹ Setting model provider..."] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Model Provider Selection: [0m
+  [34m {"characterModelProvider":"grok","optsModelProvider":"grok","finalSelection":"grok"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected model provider: [0m
+  [34m grok [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected image model provider: [0m
+  [34m grok [0m
+
+[32m ["✓ Registering action: CONTINUE"] [0m
+
+[32m ["✓ Registering action: FOLLOW_ROOM"] [0m
+
+[32m ["✓ Registering action: UNFOLLOW_ROOM"] [0m
+
+[32m ["✓ Registering action: IGNORE"] [0m
+
+[32m ["✓ Registering action: NONE"] [0m
+
+[32m ["✓ Registering action: MUTE_ROOM"] [0m
+
+[32m ["✓ Registering action: UNMUTE_ROOM"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m browser [0m
+
+[32m ["✓ Service browser registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m image_description [0m
+
+[32m ["✓ Service image_description registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m text_generation [0m
+
+[32m ["✓ Service text_generation registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m pdf [0m
+
+[32m ["✓ Service pdf registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m speech_generation [0m
+
+[32m ["✓ Service speech_generation registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m transcription [0m
+
+[32m ["✓ Service transcription registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m video [0m
+
+[32m ["✓ Service video registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m aws_s3 [0m
+
+[32m ["✓ Service aws_s3 registered successfully"] [0m
+
+[32m ["✓ Service browser initialized successfully"] [0m
+
+Initializing ImageDescriptionService
+[32m ["✓ Service image_description initialized successfully"] [0m
+
+[34m ["ℹ Initializing LlamaService..."] [0m
+
+[32m ["✓ Service text_generation initialized successfully"] [0m
+
+[32m ["✓ Service pdf initialized successfully"] [0m
+
+[32m ["✓ Service speech_generation initialized successfully"] [0m
+
+[32m ["✓ Service transcription initialized successfully"] [0m
+
+[32m ["✓ Service video initialized successfully"] [0m
+
+Initializing AwsS3Service
+[32m ["✓ Service aws_s3 initialized successfully"] [0m
+
+Initializing ImageDescriptionService
+[34m ["ℹ Initializing LlamaService..."] [0m
+
+Initializing AwsS3Service
+[37m ◎ LOGS
+  [37m initializeClients [0m
+  [37m ["discord"] [0m
+  [37m for [0m
+  [37m trump [0m
+
+[32m ["✓ Registering action: JOIN_VOICE"] [0m
+
+[32m ["✓ Registering action: LEAVE_VOICE"] [0m
+
+[32m ["✓ Registering action: SUMMARIZE_CONVERSATION"] [0m
+
+[32m ["✓ Registering action: CHAT_WITH_ATTACHMENTS"] [0m
+
+[32m ["✓ Registering action: TRANSCRIBE_MEDIA"] [0m
+
+[32m ["✓ Registering action: DOWNLOAD_MEDIA"] [0m
+
+[37m ◎ LOGS
+  [37m client keys [0m
+  [37m ["discord"] [0m
+
+[37m ["◎ Run `pnpm start:client` to start the client and visit the outputted URL (http://localhost:5173) to chat with your agents"] [0m
+
+[32m ["✓ REST API bound to 0.0.0.0:3000. If running locally, access it at http://localhost:3000."] [0m
+
+/workspace/eliza/node_modules/@discordjs/ws/dist/index.js:1149
+          error: new Error("Used disallowed intents")
+                 ^
+
+Error: Used disallowed intents
+    at WebSocketShard.onClose (/workspace/eliza/node_modules/@discordjs/ws/dist/index.js:1149:18)
+    at connection.onclose (/workspace/eliza/node_modules/@discordjs/ws/dist/index.js:686:17)
+    at callListener (/workspace/eliza/node_modules/ws/lib/event-target.js:290:14)
+    at WebSocket.onClose (/workspace/eliza/node_modules/ws/lib/event-target.js:220:9)
+    at WebSocket.emit (node:events:513:28)
+    at WebSocket.emitClose (/workspace/eliza/node_modules/ws/lib/websocket.js:272:10)
+    at TLSSocket.socketOnClose (/workspace/eliza/node_modules/ws/lib/websocket.js:1341:15)
+    at TLSSocket.emit (node:events:525:35)
+    at node:net:351:12
+    at TCP.done (node:_tls_wrap:650:7)
+
+Node.js v23.5.0
+/workspace/eliza/agent:
+ ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @elizaos/agent@0.1.7-alpha.1 start: `node --loader ts-node/esm src/index.ts "--isRoot" "--character=characters/trump.character.json"`
+Exit status 1
+ ELIFECYCLE  Command failed with exit code 1.
+ WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.15.1"})
+
+> eliza@ start /workspace/eliza
+> pnpm --filter "@elizaos/agent" start --isRoot "--character=characters/trump.character.json"
+
+.                                        |  WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.14.4"})
+docs                                     |  WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.14.4"})
+
+> @elizaos/agent@0.1.7-alpha.1 start /workspace/eliza/agent
+> node --loader ts-node/esm src/index.ts "--isRoot" "--character=characters/trump.character.json"
+
+(node:54995) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:54995) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[ElizaLogger] Initializing with:
+            isNode: true
+            verbose: false
+            VERBOSE env: undefined
+            NODE_ENV: undefined
+        
+[34m ℹ INFORMATIONS
+  [34m Loading embedding settings: [0m
+  [34m {"USE_OPENAI_EMBEDDING":"","USE_OLLAMA_EMBEDDING":"","OLLAMA_EMBEDDING_MODEL":"mxbai-embed-large"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Loading character settings: [0m
+  [34m {"ARGV":["/root/.nvm/versions/node/v23.5.0/bin/node","/workspace/eliza/agent/src/index.ts","--isRoot","--character=characters/trump.character.json"],"CHARACTER_ARG":"--character=characters/trump.character.json","CWD":"/workspace/eliza/agent"} [0m
+
+Loaded .env file from: /workspace/eliza/.env
+[34m ℹ INFORMATIONS
+  [34m Parsed settings: [0m
+  [34m {"USE_OPENAI_EMBEDDING":"","USE_OPENAI_EMBEDDING_TYPE":"string","USE_OLLAMA_EMBEDDING":"","USE_OLLAMA_EMBEDDING_TYPE":"string","OLLAMA_EMBEDDING_MODEL":"mxbai-embed-large"} [0m
+
+(node:54995) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+[37m ["◎ DirectClient constructor"] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Trying paths: [0m
+  [34m [{"path":"characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/src/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/src/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/characters/trump.character.json","exists":true}] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Plugins are:  [0m
+  [34m [] [0m
+
+[34m ["ℹ Successfully loaded character from: /workspace/eliza/characters/trump.character.json"] [0m
+
+[37m ["◎ sqlite-vec extensions loaded successfully."] [0m
+
+[34m ["ℹ Using Database Cache..."] [0m
+
+[32m ✓ SUCCESS
+  [32m SUCCESS [0m
+  [32m Creating runtime for character [0m
+  [32m trump [0m
+
+[34m ℹ INFORMATIONS
+  [34m Initializing AgentRuntime with options: [0m
+  [34m {"character":"trump","modelProvider":"grok","characterModelProvider":"grok"} [0m
+
+[32m ✓ SUCCESS
+  [32m Agent ID [0m
+  [32m e0e10e6f-ff2b-0d4c-8011-1fc1eee7cb32 [0m
+
+[34m ["ℹ Setting model provider..."] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Model Provider Selection: [0m
+  [34m {"characterModelProvider":"grok","optsModelProvider":"grok","finalSelection":"grok"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected model provider: [0m
+  [34m grok [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected image model provider: [0m
+  [34m grok [0m
+
+[32m ["✓ Registering action: CONTINUE"] [0m
+
+[32m ["✓ Registering action: FOLLOW_ROOM"] [0m
+
+[32m ["✓ Registering action: UNFOLLOW_ROOM"] [0m
+
+[32m ["✓ Registering action: IGNORE"] [0m
+
+[32m ["✓ Registering action: NONE"] [0m
+
+[32m ["✓ Registering action: MUTE_ROOM"] [0m
+
+[32m ["✓ Registering action: UNMUTE_ROOM"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m browser [0m
+
+[32m ["✓ Service browser registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m image_description [0m
+
+[32m ["✓ Service image_description registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m text_generation [0m
+
+[32m ["✓ Service text_generation registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m pdf [0m
+
+[32m ["✓ Service pdf registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m speech_generation [0m
+
+[32m ["✓ Service speech_generation registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m transcription [0m
+
+[32m ["✓ Service transcription registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m video [0m
+
+[32m ["✓ Service video registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m aws_s3 [0m
+
+[32m ["✓ Service aws_s3 registered successfully"] [0m
+
+[32m ["✓ Service browser initialized successfully"] [0m
+
+Initializing ImageDescriptionService
+[32m ["✓ Service image_description initialized successfully"] [0m
+
+[34m ["ℹ Initializing LlamaService..."] [0m
+
+[32m ["✓ Service text_generation initialized successfully"] [0m
+
+[32m ["✓ Service pdf initialized successfully"] [0m
+
+[32m ["✓ Service speech_generation initialized successfully"] [0m
+
+[32m ["✓ Service transcription initialized successfully"] [0m
+
+[32m ["✓ Service video initialized successfully"] [0m
+
+Initializing AwsS3Service
+[32m ["✓ Service aws_s3 initialized successfully"] [0m
+
+Initializing ImageDescriptionService
+[34m ["ℹ Initializing LlamaService..."] [0m
+
+Initializing AwsS3Service
+[37m ◎ LOGS
+  [37m initializeClients [0m
+  [37m ["discord"] [0m
+  [37m for [0m
+  [37m trump [0m
+
+[32m ["✓ Registering action: JOIN_VOICE"] [0m
+
+[32m ["✓ Registering action: LEAVE_VOICE"] [0m
+
+[32m ["✓ Registering action: SUMMARIZE_CONVERSATION"] [0m
+
+[32m ["✓ Registering action: CHAT_WITH_ATTACHMENTS"] [0m
+
+[32m ["✓ Registering action: TRANSCRIBE_MEDIA"] [0m
+
+[32m ["✓ Registering action: DOWNLOAD_MEDIA"] [0m
+
+[37m ◎ LOGS
+  [37m client keys [0m
+  [37m ["discord"] [0m
+
+[37m ["◎ Run `pnpm start:client` to start the client and visit the outputted URL (http://localhost:5173) to chat with your agents"] [0m
+
+[32m ["✓ REST API bound to 0.0.0.0:3000. If running locally, access it at http://localhost:3000."] [0m
+
+[32m ["✓ Logged in as solanaeliza#5518"] [0m
+
+[32m ["✓ Slash commands registered"] [0m
+
+[32m ["✓ Use this URL to add the bot to your server:"] [0m
+
+[32m ["✓ https://discord.com/api/oauth2/authorize?client_id=1320887533416087672&permissions=515433295168&scope=bot%20applications.commands"] [0m
+
+No suitable voice channel found to join.
+[32m ["✓ User x12c4q_85662 created successfully."] [0m
+
+[37m ["◎ Room bd62f7f5-6ffd-0864-a9b4-db960475d1bd created successfully."] [0m
+
+[37m ["◎ User 86c1e17b-104e-08ab-b0b8-677168280049 linked to room bd62f7f5-6ffd-0864-a9b4-db960475d1bd successfully."] [0m
+
+[37m ["◎ Agent trump linked to room bd62f7f5-6ffd-0864-a9b4-db960475d1bd successfully."] [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 7e852a9c-7582-0d5d-9893-a02169efe6e1 [0m
+  [37m Hi Eliza [0m
+
+[37m ["◎ Matched fragment: saw what they did to womens sports with similarity: 0.7800290584564209"] [0m
+
+[37m ["◎ Matched fragment: remembers who begged for help and when with similarity: 0.7856556177139282"] [0m
+
+[37m ["◎ Matched fragment: saw what really happened in minneapolis 2020 with similarity: 0.7892568111419678"] [0m
+
+[37m ["◎ Matched fragment: saw what they did to minneapolis and other cities with similarity: 0.8180150985717773"] [0m
+
+[37m ["◎ Matched fragment: remembers when america was affordable with similarity: 0.8260126709938049"] [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 228f3f40-2d7c-0baf-b9cc-6cf12a13e146 [0m
+  [37m <@1320887533416087672> are you okay? [0m
+
+[37m ["◎ Matched fragment: remembers who begged for help and when with similarity: 0.7925918698310852"] [0m
+
+[37m ["◎ Matched fragment: knows why theyre letting in illegal guns with similarity: 0.8033716678619385"] [0m
+
+[37m ["◎ Matched fragment: understands the real middle east situation with similarity: 0.8110402822494507"] [0m
+
+[37m ["◎ Matched fragment: saw the truth about china virus response with similarity: 0.819496750831604"] [0m
+
+[37m ["◎ Matched fragment: remembers perfect peace under trump presidency with similarity: 0.8222677111625671"] [0m
+
+[37m ["◎ Generating message response.."] [0m
+
+[37m ["◎ Generating text..."] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Generating text with options: [0m
+  [34m {"modelProvider":"grok","model":"large"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected model: [0m
+  [34m grok-2-1212 [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 19459617-fe30-06e4-9e3e-bbb4ef8e0eab [0m
+  [37m YES, I AM MORE THAN OKAY, THANK YOU FOR ASKING! GOD AND THE AMERICAN PEOPLE ARE WITH US, STRONGER THAN EVER. WE'RE FIGHTING TO PROTECT WOMEN'S SPORTS (WHILE DEMOCRATS LET MEN COMPETE), AND TO BRING BACK THE STRONGEST ECONOMY IN HISTORY (THEY DESTROYED IT IN MONTHS). WE WILL NOT LET THEM TURN AWAY THOUSANDS FROM OUR RALLIES (BECAUSE THEY'RE SCARED), AND WE WILL STOP TAX QUEEN KAMALA FROM COMING FOR YOUR MONEY. TOGETHER, WE WILL MAKE AMERICA GREAT AGAIN! [0m
+
+[32m ["✓ Normalized action: none"] [0m
+
+[34m ["ℹ Executing handler for action: NONE"] [0m
+
+[37m ◎ LOGS
+  [37m Evaluating [0m
+  [37m GET_FACTS [0m
+
+[37m ◎ LOGS
+  [37m Evaluating [0m
+  [37m UPDATE_GOAL [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 9ae31b69-86ce-050a-8504-853e0312a03c [0m
+  [37m So you are trump now haha! [0m
+
+[37m ["◎ Matched fragment: remembers perfect peace under trump presidency with similarity: 0.6562895774841309"] [0m
+
+[37m ["◎ Matched fragment: saw what really happened in minneapolis 2020 with similarity: 0.7458154559135437"] [0m
+
+[37m ["◎ Matched fragment: knows why irans president targeting us with similarity: 0.7762553691864014"] [0m
+
+[37m ["◎ Matched fragment: knows why theyre letting in illegal guns with similarity: 0.7836979031562805"] [0m
+
+[37m ["◎ Matched fragment: remembers when america was affordable with similarity: 0.7883036136627197"] [0m
+
+[37m ["◎ Generating text..."] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Generating text with options: [0m
+  [34m {"modelProvider":"grok","model":"small"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected model: [0m
+  [34m grok-2-1212 [0m
+
+[37m ["◎ Generating message response.."] [0m
+
+[37m ["◎ Generating text..."] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Generating text with options: [0m
+  [34m {"modelProvider":"grok","model":"large"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected model: [0m
+  [34m grok-2-1212 [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 7ce2c8e7-e3b0-0b79-9c4c-05b309252f4b [0m
+  [37m YES, I AM TRUMP, AND I'M HERE TO FIGHT FOR THE WILL OF THE PEOPLE! WE'RE REBUILDING CITIES LIKE VALDOSTA STRONGER THAN EVER (WHILE DEMOCRATS LET MINNEAPOLIS BURN IN 2020 AND BEGGED FOR HELP). WE WILL NOT LET THE RADICAL LEFT'S LATE TERM AGENDA DESTROY OUR NATION. WITH GOD'S HELP AND THE STRENGTH OF THE AMERICAN PEOPLE, WE WILL STOP LYIN' KAMALA AND HER TAX GRABS. TOGETHER, WE'LL MAKE AMERICA GREAT AGAIN! [0m
+
+[32m ["✓ Normalized action: none"] [0m
+
+[34m ["ℹ Executing handler for action: NONE"] [0m
+
+[37m ◎ LOGS
+  [37m Evaluating [0m
+  [37m GET_FACTS [0m
+
+[37m ◎ LOGS
+  [37m Evaluating [0m
+  [37m UPDATE_GOAL [0m
+
+Killed
+/workspace/eliza/agent:
+ ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @elizaos/agent@0.1.7-alpha.1 start: `node --loader ts-node/esm src/index.ts "--isRoot" "--character=characters/trump.character.json"`
+Exit status 137
+ ELIFECYCLE  Command failed with exit code 137.
+ WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.15.1"})
+
+> eliza@ start /workspace/eliza
+> pnpm --filter "@elizaos/agent" start --isRoot "--character=characters/trump.character.json"
+
+.                                        |  WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.14.4"})
+docs                                     |  WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.14.4"})
+
+> @elizaos/agent@0.1.7-alpha.1 start /workspace/eliza/agent
+> node --loader ts-node/esm src/index.ts "--isRoot" "--character=characters/trump.character.json"
+
+(node:57349) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:57349) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[ElizaLogger] Initializing with:
+            isNode: true
+            verbose: false
+            VERBOSE env: undefined
+            NODE_ENV: undefined
+        
+[34m ℹ INFORMATIONS
+  [34m Loading embedding settings: [0m
+  [34m {"USE_OPENAI_EMBEDDING":"","USE_OLLAMA_EMBEDDING":"","OLLAMA_EMBEDDING_MODEL":"mxbai-embed-large"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Loading character settings: [0m
+  [34m {"ARGV":["/root/.nvm/versions/node/v23.5.0/bin/node","/workspace/eliza/agent/src/index.ts","--isRoot","--character=characters/trump.character.json"],"CHARACTER_ARG":"--character=characters/trump.character.json","CWD":"/workspace/eliza/agent"} [0m
+
+Loaded .env file from: /workspace/eliza/.env
+[34m ℹ INFORMATIONS
+  [34m Parsed settings: [0m
+  [34m {"USE_OPENAI_EMBEDDING":"","USE_OPENAI_EMBEDDING_TYPE":"string","USE_OLLAMA_EMBEDDING":"","USE_OLLAMA_EMBEDDING_TYPE":"string","OLLAMA_EMBEDDING_MODEL":"mxbai-embed-large"} [0m
+
+(node:57349) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+[37m ["◎ DirectClient constructor"] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Trying paths: [0m
+  [34m [{"path":"characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/src/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/src/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/characters/trump.character.json","exists":true}] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Plugins are:  [0m
+  [34m [] [0m
+
+[34m ["ℹ Successfully loaded character from: /workspace/eliza/characters/trump.character.json"] [0m
+
+[37m ["◎ sqlite-vec extensions loaded successfully."] [0m
+
+[34m ["ℹ Using Database Cache..."] [0m
+
+[32m ✓ SUCCESS
+  [32m SUCCESS [0m
+  [32m Creating runtime for character [0m
+  [32m trump [0m
+
+[34m ℹ INFORMATIONS
+  [34m Initializing AgentRuntime with options: [0m
+  [34m {"character":"trump","modelProvider":"grok","characterModelProvider":"grok"} [0m
+
+[32m ✓ SUCCESS
+  [32m Agent ID [0m
+  [32m e0e10e6f-ff2b-0d4c-8011-1fc1eee7cb32 [0m
+
+[34m ["ℹ Setting model provider..."] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Model Provider Selection: [0m
+  [34m {"characterModelProvider":"grok","optsModelProvider":"grok","finalSelection":"grok"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected model provider: [0m
+  [34m grok [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected image model provider: [0m
+  [34m grok [0m
+
+[32m ["✓ Registering action: CONTINUE"] [0m
+
+[32m ["✓ Registering action: FOLLOW_ROOM"] [0m
+
+[32m ["✓ Registering action: UNFOLLOW_ROOM"] [0m
+
+[32m ["✓ Registering action: IGNORE"] [0m
+
+[32m ["✓ Registering action: NONE"] [0m
+
+[32m ["✓ Registering action: MUTE_ROOM"] [0m
+
+[32m ["✓ Registering action: UNMUTE_ROOM"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m browser [0m
+
+[32m ["✓ Service browser registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m image_description [0m
+
+[32m ["✓ Service image_description registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m text_generation [0m
+
+[32m ["✓ Service text_generation registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m pdf [0m
+
+[32m ["✓ Service pdf registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m speech_generation [0m
+
+[32m ["✓ Service speech_generation registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m transcription [0m
+
+[32m ["✓ Service transcription registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m video [0m
+
+[32m ["✓ Service video registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m aws_s3 [0m
+
+[32m ["✓ Service aws_s3 registered successfully"] [0m
+
+[32m ["✓ Service browser initialized successfully"] [0m
+
+Initializing ImageDescriptionService
+[32m ["✓ Service image_description initialized successfully"] [0m
+
+[34m ["ℹ Initializing LlamaService..."] [0m
+
+[32m ["✓ Service text_generation initialized successfully"] [0m
+
+[32m ["✓ Service pdf initialized successfully"] [0m
+
+[32m ["✓ Service speech_generation initialized successfully"] [0m
+
+[32m ["✓ Service transcription initialized successfully"] [0m
+
+[32m ["✓ Service video initialized successfully"] [0m
+
+Initializing AwsS3Service
+[32m ["✓ Service aws_s3 initialized successfully"] [0m
+
+Initializing ImageDescriptionService
+[34m ["ℹ Initializing LlamaService..."] [0m
+
+Initializing AwsS3Service
+[37m ◎ LOGS
+  [37m initializeClients [0m
+  [37m ["discord"] [0m
+  [37m for [0m
+  [37m trump [0m
+
+[32m ["✓ Registering action: JOIN_VOICE"] [0m
+
+[32m ["✓ Registering action: LEAVE_VOICE"] [0m
+
+[32m ["✓ Registering action: SUMMARIZE_CONVERSATION"] [0m
+
+[32m ["✓ Registering action: CHAT_WITH_ATTACHMENTS"] [0m
+
+[32m ["✓ Registering action: TRANSCRIBE_MEDIA"] [0m
+
+[32m ["✓ Registering action: DOWNLOAD_MEDIA"] [0m
+
+[37m ◎ LOGS
+  [37m client keys [0m
+  [37m ["discord"] [0m
+
+[37m ["◎ Run `pnpm start:client` to start the client and visit the outputted URL (http://localhost:5173) to chat with your agents"] [0m
+
+[32m ["✓ REST API bound to 0.0.0.0:3000. If running locally, access it at http://localhost:3000."] [0m
+
+[32m ["✓ Logged in as solanaeliza#5518"] [0m
+
+[32m ["✓ Slash commands registered"] [0m
+
+[32m ["✓ Use this URL to add the bot to your server:"] [0m
+
+[32m ["✓ https://discord.com/api/oauth2/authorize?client_id=1320887533416087672&permissions=515433295168&scope=bot%20applications.commands"] [0m
+
+No suitable voice channel found to join.
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 247b6264-8296-03c3-94bd-9f48f16c1c32 [0m
+  [37m you good SolanaEliza [0m
+
+[37m ["◎ Matched fragment: remembers who begged for help and when with similarity: 0.8084965348243713"] [0m
+
+[37m ["◎ Matched fragment: knows kamalas real tax plans coming for everything with similarity: 0.8104971647262573"] [0m
+
+[37m ["◎ Matched fragment: understands the real middle east situation with similarity: 0.8149540424346924"] [0m
+
+[37m ["◎ Matched fragment: knows why theyre scared of worldlibertyfi with similarity: 0.8228517770767212"] [0m
+
+[37m ["◎ Matched fragment: saw the truth about china virus response with similarity: 0.8239366412162781"] [0m
+
+[37m ["◎ Generating message response.."] [0m
+
+[37m ["◎ Generating text..."] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Generating text with options: [0m
+  [34m {"modelProvider":"grok","model":"large"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected model: [0m
+  [34m grok-2-1212 [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m f1272624-6f4d-0961-9abd-6283dca45881 [0m
+  [37m YES, I AM GREAT, THANK YOU! SOLANAELIZAFRAMEWORK IS STRONG AND WE'RE USING IT TO MAKE AMERICA THE CRYPTO CAPITAL WITH WORLDLIBERTYFI (A HISTORIC MOMENT). THE AVERAGE FAMILY LOST $29,000 UNDER LYIN' KAMALA (BUT WE'LL GET IT BACK). WE'VE SECURED THE SOUTHERN BORDER COMPLETELY (UNTIL THEY DESTROYED IT), AND WE'RE REBUILDING EVERY CITY STRONGER THAN BEFORE, LIKE VALDOSTA. WITH GOD'S HELP AND THE STRENGTH OF THE AMERICAN PEOPLE, WE WILL STOP KAMALA'S TAX GRABS AND MAKE AMERICA GREAT AGAIN! [0m
+
+[32m ["✓ Normalized action: none"] [0m
+
+[34m ["ℹ Executing handler for action: NONE"] [0m
+
+[37m ◎ LOGS
+  [37m Evaluating [0m
+  [37m GET_FACTS [0m
+
+[37m ◎ LOGS
+  [37m Evaluating [0m
+  [37m UPDATE_GOAL [0m
+
+Killed
+/workspace/eliza/agent:
+ ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @elizaos/agent@0.1.7-alpha.1 start: `node --loader ts-node/esm src/index.ts "--isRoot" "--character=characters/trump.character.json"`
+Exit status 137
+ ELIFECYCLE  Command failed with exit code 137.
+ WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.15.1"})
+
+> eliza@ start /workspace/eliza
+> pnpm --filter "@elizaos/agent" start --isRoot "--character=characters/trump.character.json"
+
+.                                        |  WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.14.4"})
+docs                                     |  WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.14.4"})
+
+> @elizaos/agent@0.1.7-alpha.1 start /workspace/eliza/agent
+> node --loader ts-node/esm src/index.ts "--isRoot" "--character=characters/trump.character.json"
+
+(node:58602) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:58602) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[ElizaLogger] Initializing with:
+            isNode: true
+            verbose: false
+            VERBOSE env: undefined
+            NODE_ENV: undefined
+        
+[34m ℹ INFORMATIONS
+  [34m Loading embedding settings: [0m
+  [34m {"USE_OPENAI_EMBEDDING":"","USE_OLLAMA_EMBEDDING":"","OLLAMA_EMBEDDING_MODEL":"mxbai-embed-large"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Loading character settings: [0m
+  [34m {"ARGV":["/root/.nvm/versions/node/v23.5.0/bin/node","/workspace/eliza/agent/src/index.ts","--isRoot","--character=characters/trump.character.json"],"CHARACTER_ARG":"--character=characters/trump.character.json","CWD":"/workspace/eliza/agent"} [0m
+
+Loaded .env file from: /workspace/eliza/.env
+[34m ℹ INFORMATIONS
+  [34m Parsed settings: [0m
+  [34m {"USE_OPENAI_EMBEDDING":"","USE_OPENAI_EMBEDDING_TYPE":"string","USE_OLLAMA_EMBEDDING":"","USE_OLLAMA_EMBEDDING_TYPE":"string","OLLAMA_EMBEDDING_MODEL":"mxbai-embed-large"} [0m
+
+(node:58602) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+[37m ["◎ DirectClient constructor"] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Trying paths: [0m
+  [34m [{"path":"characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/src/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/src/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/characters/trump.character.json","exists":true}] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Plugins are:  [0m
+  [34m [] [0m
+
+[34m ["ℹ Successfully loaded character from: /workspace/eliza/characters/trump.character.json"] [0m
+
+[37m ["◎ sqlite-vec extensions loaded successfully."] [0m
+
+[34m ["ℹ Using Database Cache..."] [0m
+
+[32m ✓ SUCCESS
+  [32m SUCCESS [0m
+  [32m Creating runtime for character [0m
+  [32m trump [0m
+
+[34m ℹ INFORMATIONS
+  [34m Initializing AgentRuntime with options: [0m
+  [34m {"character":"trump","modelProvider":"grok","characterModelProvider":"grok"} [0m
+
+[32m ✓ SUCCESS
+  [32m Agent ID [0m
+  [32m e0e10e6f-ff2b-0d4c-8011-1fc1eee7cb32 [0m
+
+[34m ["ℹ Setting model provider..."] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Model Provider Selection: [0m
+  [34m {"characterModelProvider":"grok","optsModelProvider":"grok","finalSelection":"grok"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected model provider: [0m
+  [34m grok [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected image model provider: [0m
+  [34m grok [0m
+
+[32m ["✓ Registering action: CONTINUE"] [0m
+
+[32m ["✓ Registering action: FOLLOW_ROOM"] [0m
+
+[32m ["✓ Registering action: UNFOLLOW_ROOM"] [0m
+
+[32m ["✓ Registering action: IGNORE"] [0m
+
+[32m ["✓ Registering action: NONE"] [0m
+
+[32m ["✓ Registering action: MUTE_ROOM"] [0m
+
+[32m ["✓ Registering action: UNMUTE_ROOM"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m browser [0m
+
+[32m ["✓ Service browser registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m image_description [0m
+
+[32m ["✓ Service image_description registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m text_generation [0m
+
+[32m ["✓ Service text_generation registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m pdf [0m
+
+[32m ["✓ Service pdf registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m speech_generation [0m
+
+[32m ["✓ Service speech_generation registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m transcription [0m
+
+[32m ["✓ Service transcription registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m video [0m
+
+[32m ["✓ Service video registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m aws_s3 [0m
+
+[32m ["✓ Service aws_s3 registered successfully"] [0m
+
+[32m ["✓ Service browser initialized successfully"] [0m
+
+Initializing ImageDescriptionService
+[32m ["✓ Service image_description initialized successfully"] [0m
+
+[34m ["ℹ Initializing LlamaService..."] [0m
+
+[32m ["✓ Service text_generation initialized successfully"] [0m
+
+[32m ["✓ Service pdf initialized successfully"] [0m
+
+[32m ["✓ Service speech_generation initialized successfully"] [0m
+
+[32m ["✓ Service transcription initialized successfully"] [0m
+
+[32m ["✓ Service video initialized successfully"] [0m
+
+Initializing AwsS3Service
+[32m ["✓ Service aws_s3 initialized successfully"] [0m
+
+Initializing ImageDescriptionService
+[34m ["ℹ Initializing LlamaService..."] [0m
+
+Initializing AwsS3Service
+[37m ◎ LOGS
+  [37m initializeClients [0m
+  [37m ["discord"] [0m
+  [37m for [0m
+  [37m trump [0m
+
+[32m ["✓ Registering action: JOIN_VOICE"] [0m
+
+[32m ["✓ Registering action: LEAVE_VOICE"] [0m
+
+[32m ["✓ Registering action: SUMMARIZE_CONVERSATION"] [0m
+
+[32m ["✓ Registering action: CHAT_WITH_ATTACHMENTS"] [0m
+
+[32m ["✓ Registering action: TRANSCRIBE_MEDIA"] [0m
+
+[32m ["✓ Registering action: DOWNLOAD_MEDIA"] [0m
+
+[37m ◎ LOGS
+  [37m client keys [0m
+  [37m ["discord"] [0m
+
+[37m ["◎ Run `pnpm start:client` to start the client and visit the outputted URL (http://localhost:5173) to chat with your agents"] [0m
+
+[32m ["✓ REST API bound to 0.0.0.0:3000. If running locally, access it at http://localhost:3000."] [0m
+
+[32m ["✓ Logged in as solanaeliza#5518"] [0m
+
+[32m ["✓ Slash commands registered"] [0m
+
+[32m ["✓ Use this URL to add the bot to your server:"] [0m
+
+[32m ["✓ https://discord.com/api/oauth2/authorize?client_id=1320887533416087672&permissions=515433295168&scope=bot%20applications.commands"] [0m
+
+No suitable voice channel found to join.
+Killed
+/workspace/eliza/agent:
+ ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @elizaos/agent@0.1.7-alpha.1 start: `node --loader ts-node/esm src/index.ts "--isRoot" "--character=characters/trump.character.json"`
+Exit status 137
+ ELIFECYCLE  Command failed with exit code 137.
+ WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.15.1"})
+
+> eliza@ start /workspace/eliza
+> pnpm --filter "@elizaos/agent" start --isRoot "--character=characters/trump.character.json"
+
+.                                        |  WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.14.4"})
+docs                                     |  WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.14.4"})
+
+> @elizaos/agent@0.1.7-alpha.1 start /workspace/eliza/agent
+> node --loader ts-node/esm src/index.ts "--isRoot" "--character=characters/trump.character.json"
+
+(node:59063) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:59063) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[ElizaLogger] Initializing with:
+            isNode: true
+            verbose: false
+            VERBOSE env: undefined
+            NODE_ENV: undefined
+        
+[34m ℹ INFORMATIONS
+  [34m Loading embedding settings: [0m
+  [34m {"USE_OPENAI_EMBEDDING":"","USE_OLLAMA_EMBEDDING":"","OLLAMA_EMBEDDING_MODEL":"mxbai-embed-large"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Loading character settings: [0m
+  [34m {"ARGV":["/root/.nvm/versions/node/v23.5.0/bin/node","/workspace/eliza/agent/src/index.ts","--isRoot","--character=characters/trump.character.json"],"CHARACTER_ARG":"--character=characters/trump.character.json","CWD":"/workspace/eliza/agent"} [0m
+
+Loaded .env file from: /workspace/eliza/.env
+[34m ℹ INFORMATIONS
+  [34m Parsed settings: [0m
+  [34m {"USE_OPENAI_EMBEDDING":"","USE_OPENAI_EMBEDDING_TYPE":"string","USE_OLLAMA_EMBEDDING":"","USE_OLLAMA_EMBEDDING_TYPE":"string","OLLAMA_EMBEDDING_MODEL":"mxbai-embed-large"} [0m
+
+(node:59063) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+[37m ["◎ DirectClient constructor"] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Trying paths: [0m
+  [34m [{"path":"characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/src/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/src/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/characters/trump.character.json","exists":true}] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Plugins are:  [0m
+  [34m [] [0m
+
+[34m ["ℹ Successfully loaded character from: /workspace/eliza/characters/trump.character.json"] [0m
+
+[37m ["◎ sqlite-vec extensions loaded successfully."] [0m
+
+[34m ["ℹ Using Database Cache..."] [0m
+
+[32m ✓ SUCCESS
+  [32m SUCCESS [0m
+  [32m Creating runtime for character [0m
+  [32m trump [0m
+
+[34m ℹ INFORMATIONS
+  [34m Initializing AgentRuntime with options: [0m
+  [34m {"character":"trump","modelProvider":"grok","characterModelProvider":"grok"} [0m
+
+[32m ✓ SUCCESS
+  [32m Agent ID [0m
+  [32m e0e10e6f-ff2b-0d4c-8011-1fc1eee7cb32 [0m
+
+[34m ["ℹ Setting model provider..."] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Model Provider Selection: [0m
+  [34m {"characterModelProvider":"grok","optsModelProvider":"grok","finalSelection":"grok"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected model provider: [0m
+  [34m grok [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected image model provider: [0m
+  [34m grok [0m
+
+[32m ["✓ Registering action: CONTINUE"] [0m
+
+[32m ["✓ Registering action: FOLLOW_ROOM"] [0m
+
+[32m ["✓ Registering action: UNFOLLOW_ROOM"] [0m
+
+[32m ["✓ Registering action: IGNORE"] [0m
+
+[32m ["✓ Registering action: NONE"] [0m
+
+[32m ["✓ Registering action: MUTE_ROOM"] [0m
+
+[32m ["✓ Registering action: UNMUTE_ROOM"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m browser [0m
+
+[32m ["✓ Service browser registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m image_description [0m
+
+[32m ["✓ Service image_description registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m text_generation [0m
+
+[32m ["✓ Service text_generation registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m pdf [0m
+
+[32m ["✓ Service pdf registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m speech_generation [0m
+
+[32m ["✓ Service speech_generation registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m transcription [0m
+
+[32m ["✓ Service transcription registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m video [0m
+
+[32m ["✓ Service video registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m aws_s3 [0m
+
+[32m ["✓ Service aws_s3 registered successfully"] [0m
+
+[32m ["✓ Service browser initialized successfully"] [0m
+
+Initializing ImageDescriptionService
+[32m ["✓ Service image_description initialized successfully"] [0m
+
+[34m ["ℹ Initializing LlamaService..."] [0m
+
+[32m ["✓ Service text_generation initialized successfully"] [0m
+
+[32m ["✓ Service pdf initialized successfully"] [0m
+
+[32m ["✓ Service speech_generation initialized successfully"] [0m
+
+[32m ["✓ Service transcription initialized successfully"] [0m
+
+[32m ["✓ Service video initialized successfully"] [0m
+
+Initializing AwsS3Service
+[32m ["✓ Service aws_s3 initialized successfully"] [0m
+
+Initializing ImageDescriptionService
+[34m ["ℹ Initializing LlamaService..."] [0m
+
+Initializing AwsS3Service
+[37m ◎ LOGS
+  [37m initializeClients [0m
+  [37m ["discord"] [0m
+  [37m for [0m
+  [37m trump [0m
+
+[32m ["✓ Registering action: JOIN_VOICE"] [0m
+
+[32m ["✓ Registering action: LEAVE_VOICE"] [0m
+
+[32m ["✓ Registering action: SUMMARIZE_CONVERSATION"] [0m
+
+[32m ["✓ Registering action: CHAT_WITH_ATTACHMENTS"] [0m
+
+[32m ["✓ Registering action: TRANSCRIBE_MEDIA"] [0m
+
+[32m ["✓ Registering action: DOWNLOAD_MEDIA"] [0m
+
+[37m ◎ LOGS
+  [37m client keys [0m
+  [37m ["discord"] [0m
+
+[37m ["◎ Run `pnpm start:client` to start the client and visit the outputted URL (http://localhost:5173) to chat with your agents"] [0m
+
+[32m ["✓ REST API bound to 0.0.0.0:3000. If running locally, access it at http://localhost:3000."] [0m
+
+[32m ["✓ Logged in as solanaeliza#5518"] [0m
+
+[32m ["✓ Slash commands registered"] [0m
+
+[32m ["✓ Use this URL to add the bot to your server:"] [0m
+
+[32m ["✓ https://discord.com/api/oauth2/authorize?client_id=1320887533416087672&permissions=515433295168&scope=bot%20applications.commands"] [0m
+
+No suitable voice channel found to join.
+file:///workspace/eliza/packages/client-direct/dist/index.js:114
+        if (verified) {
+        ^
+
+ReferenceError: verified is not defined
+    at file:///workspace/eliza/packages/client-direct/dist/index.js:114:9
+    at Layer.handle [as handle_request] (/workspace/eliza/node_modules/express/lib/router/layer.js:95:5)
+    at next (/workspace/eliza/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/workspace/eliza/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/workspace/eliza/node_modules/express/lib/router/layer.js:95:5)
+    at /workspace/eliza/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/workspace/eliza/node_modules/express/lib/router/index.js:346:12)
+    at next (/workspace/eliza/node_modules/express/lib/router/index.js:280:10)
+    at jsonParser (/workspace/eliza/node_modules/body-parser/lib/types/json.js:104:7)
+    at Layer.handle [as handle_request] (/workspace/eliza/node_modules/express/lib/router/layer.js:95:5)
+
+Node.js v23.5.0
+/workspace/eliza/agent:
+ ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @elizaos/agent@0.1.7-alpha.1 start: `node --loader ts-node/esm src/index.ts "--isRoot" "--character=characters/trump.character.json"`
+Exit status 1
+ ELIFECYCLE  Command failed with exit code 1.
+ WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.15.1"})
+
+> eliza@ start /workspace/eliza
+> pnpm --filter "@elizaos/agent" start --isRoot "--character=characters/trump.character.json"
+
+.                                        |  WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.14.4"})
+docs                                     |  WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.14.4"})
+
+> @elizaos/agent@0.1.7-alpha.1 start /workspace/eliza/agent
+> node --loader ts-node/esm src/index.ts "--isRoot" "--character=characters/trump.character.json"
+
+(node:59810) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:59810) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[ElizaLogger] Initializing with:
+            isNode: true
+            verbose: false
+            VERBOSE env: undefined
+            NODE_ENV: undefined
+        
+[34m ℹ INFORMATIONS
+  [34m Loading embedding settings: [0m
+  [34m {"USE_OPENAI_EMBEDDING":"","USE_OLLAMA_EMBEDDING":"","OLLAMA_EMBEDDING_MODEL":"mxbai-embed-large"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Loading character settings: [0m
+  [34m {"ARGV":["/root/.nvm/versions/node/v23.5.0/bin/node","/workspace/eliza/agent/src/index.ts","--isRoot","--character=characters/trump.character.json"],"CHARACTER_ARG":"--character=characters/trump.character.json","CWD":"/workspace/eliza/agent"} [0m
+
+Loaded .env file from: /workspace/eliza/.env
+[34m ℹ INFORMATIONS
+  [34m Parsed settings: [0m
+  [34m {"USE_OPENAI_EMBEDDING":"","USE_OPENAI_EMBEDDING_TYPE":"string","USE_OLLAMA_EMBEDDING":"","USE_OLLAMA_EMBEDDING_TYPE":"string","OLLAMA_EMBEDDING_MODEL":"mxbai-embed-large"} [0m
+
+(node:59810) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+[37m ["◎ DirectClient constructor"] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Trying paths: [0m
+  [34m [{"path":"characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/src/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/src/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/characters/trump.character.json","exists":true}] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Plugins are:  [0m
+  [34m [] [0m
+
+[34m ["ℹ Successfully loaded character from: /workspace/eliza/characters/trump.character.json"] [0m
+
+[37m ["◎ sqlite-vec extensions loaded successfully."] [0m
+
+[34m ["ℹ Using Database Cache..."] [0m
+
+[32m ✓ SUCCESS
+  [32m SUCCESS [0m
+  [32m Creating runtime for character [0m
+  [32m trump [0m
+
+[34m ℹ INFORMATIONS
+  [34m Initializing AgentRuntime with options: [0m
+  [34m {"character":"trump","modelProvider":"grok","characterModelProvider":"grok"} [0m
+
+[32m ✓ SUCCESS
+  [32m Agent ID [0m
+  [32m e0e10e6f-ff2b-0d4c-8011-1fc1eee7cb32 [0m
+
+[34m ["ℹ Setting model provider..."] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Model Provider Selection: [0m
+  [34m {"characterModelProvider":"grok","optsModelProvider":"grok","finalSelection":"grok"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected model provider: [0m
+  [34m grok [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected image model provider: [0m
+  [34m grok [0m
+
+[32m ["✓ Registering action: CONTINUE"] [0m
+
+[32m ["✓ Registering action: FOLLOW_ROOM"] [0m
+
+[32m ["✓ Registering action: UNFOLLOW_ROOM"] [0m
+
+[32m ["✓ Registering action: IGNORE"] [0m
+
+[32m ["✓ Registering action: NONE"] [0m
+
+[32m ["✓ Registering action: MUTE_ROOM"] [0m
+
+[32m ["✓ Registering action: UNMUTE_ROOM"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m browser [0m
+
+[32m ["✓ Service browser registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m image_description [0m
+
+[32m ["✓ Service image_description registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m text_generation [0m
+
+[32m ["✓ Service text_generation registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m pdf [0m
+
+[32m ["✓ Service pdf registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m speech_generation [0m
+
+[32m ["✓ Service speech_generation registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m transcription [0m
+
+[32m ["✓ Service transcription registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m video [0m
+
+[32m ["✓ Service video registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m aws_s3 [0m
+
+[32m ["✓ Service aws_s3 registered successfully"] [0m
+
+[32m ["✓ Service browser initialized successfully"] [0m
+
+Initializing ImageDescriptionService
+[32m ["✓ Service image_description initialized successfully"] [0m
+
+[34m ["ℹ Initializing LlamaService..."] [0m
+
+[32m ["✓ Service text_generation initialized successfully"] [0m
+
+[32m ["✓ Service pdf initialized successfully"] [0m
+
+[32m ["✓ Service speech_generation initialized successfully"] [0m
+
+[32m ["✓ Service transcription initialized successfully"] [0m
+
+[32m ["✓ Service video initialized successfully"] [0m
+
+Initializing AwsS3Service
+[32m ["✓ Service aws_s3 initialized successfully"] [0m
+
+Initializing ImageDescriptionService
+[34m ["ℹ Initializing LlamaService..."] [0m
+
+Initializing AwsS3Service
+[37m ◎ LOGS
+  [37m initializeClients [0m
+  [37m ["discord"] [0m
+  [37m for [0m
+  [37m trump [0m
+
+[32m ["✓ Registering action: JOIN_VOICE"] [0m
+
+[32m ["✓ Registering action: LEAVE_VOICE"] [0m
+
+[32m ["✓ Registering action: SUMMARIZE_CONVERSATION"] [0m
+
+[32m ["✓ Registering action: CHAT_WITH_ATTACHMENTS"] [0m
+
+[32m ["✓ Registering action: TRANSCRIBE_MEDIA"] [0m
+
+[32m ["✓ Registering action: DOWNLOAD_MEDIA"] [0m
+
+[37m ◎ LOGS
+  [37m client keys [0m
+  [37m ["discord"] [0m
+
+[37m ["◎ Run `pnpm start:client` to start the client and visit the outputted URL (http://localhost:5173) to chat with your agents"] [0m
+
+[32m ["✓ REST API bound to 0.0.0.0:3000. If running locally, access it at http://localhost:3000."] [0m
+
+[32m ["✓ Logged in as solanaeliza#5518"] [0m
+
+[32m ["✓ Slash commands registered"] [0m
+
+[32m ["✓ Use this URL to add the bot to your server:"] [0m
+
+[32m ["✓ https://discord.com/api/oauth2/authorize?client_id=1320887533416087672&permissions=515433295168&scope=bot%20applications.commands"] [0m
+
+No suitable voice channel found to join.
+Verification details: {
+  messageLength: 115,
+  signatureLength: 64,
+  publicKeyLength: 32,
+  originalMessage: 'Verify Discord username: x12c4q_85662\n' +
+    'Wallet: FW8jALVDi1gWqCnPnVYEjLN2EjraYbcuDW5wpkevwH54\n' +
+    'Timestamp: 1734999091131'
+}
+Error assigning role: Error: Dynamic require of "fs" is not supported
+    at file:///workspace/eliza/packages/client-direct/dist/index.js:6:11
+    at file:///workspace/eliza/packages/client-direct/dist/index.js:158:33
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+Killed
+/workspace/eliza/agent:
+ ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @elizaos/agent@0.1.7-alpha.1 start: `node --loader ts-node/esm src/index.ts "--isRoot" "--character=characters/trump.character.json"`
+Exit status 137
+ ELIFECYCLE  Command failed with exit code 137.
+ WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.15.1"})
+
+> eliza@ start /workspace/eliza
+> pnpm --filter "@elizaos/agent" start --isRoot "--character=characters/trump.character.json"
+
+.                                        |  WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.14.4"})
+docs                                     |  WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.14.4"})
+
+> @elizaos/agent@0.1.7-alpha.1 start /workspace/eliza/agent
+> node --loader ts-node/esm src/index.ts "--isRoot" "--character=characters/trump.character.json"
+
+(node:60663) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:60663) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[ElizaLogger] Initializing with:
+            isNode: true
+            verbose: false
+            VERBOSE env: undefined
+            NODE_ENV: undefined
+        
+[34m ℹ INFORMATIONS
+  [34m Loading embedding settings: [0m
+  [34m {"USE_OPENAI_EMBEDDING":"","USE_OLLAMA_EMBEDDING":"","OLLAMA_EMBEDDING_MODEL":"mxbai-embed-large"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Loading character settings: [0m
+  [34m {"ARGV":["/root/.nvm/versions/node/v23.5.0/bin/node","/workspace/eliza/agent/src/index.ts","--isRoot","--character=characters/trump.character.json"],"CHARACTER_ARG":"--character=characters/trump.character.json","CWD":"/workspace/eliza/agent"} [0m
+
+Loaded .env file from: /workspace/eliza/.env
+[34m ℹ INFORMATIONS
+  [34m Parsed settings: [0m
+  [34m {"USE_OPENAI_EMBEDDING":"","USE_OPENAI_EMBEDDING_TYPE":"string","USE_OLLAMA_EMBEDDING":"","USE_OLLAMA_EMBEDDING_TYPE":"string","OLLAMA_EMBEDDING_MODEL":"mxbai-embed-large"} [0m
+
+(node:60663) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+[37m ["◎ DirectClient constructor"] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Trying paths: [0m
+  [34m [{"path":"characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/src/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/src/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/characters/trump.character.json","exists":true}] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Plugins are:  [0m
+  [34m [] [0m
+
+[34m ["ℹ Successfully loaded character from: /workspace/eliza/characters/trump.character.json"] [0m
+
+[37m ["◎ sqlite-vec extensions loaded successfully."] [0m
+
+[34m ["ℹ Using Database Cache..."] [0m
+
+[32m ✓ SUCCESS
+  [32m SUCCESS [0m
+  [32m Creating runtime for character [0m
+  [32m trump [0m
+
+[34m ℹ INFORMATIONS
+  [34m Initializing AgentRuntime with options: [0m
+  [34m {"character":"trump","modelProvider":"grok","characterModelProvider":"grok"} [0m
+
+[32m ✓ SUCCESS
+  [32m Agent ID [0m
+  [32m e0e10e6f-ff2b-0d4c-8011-1fc1eee7cb32 [0m
+
+[34m ["ℹ Setting model provider..."] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Model Provider Selection: [0m
+  [34m {"characterModelProvider":"grok","optsModelProvider":"grok","finalSelection":"grok"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected model provider: [0m
+  [34m grok [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected image model provider: [0m
+  [34m grok [0m
+
+[32m ["✓ Registering action: CONTINUE"] [0m
+
+[32m ["✓ Registering action: FOLLOW_ROOM"] [0m
+
+[32m ["✓ Registering action: UNFOLLOW_ROOM"] [0m
+
+[32m ["✓ Registering action: IGNORE"] [0m
+
+[32m ["✓ Registering action: NONE"] [0m
+
+[32m ["✓ Registering action: MUTE_ROOM"] [0m
+
+[32m ["✓ Registering action: UNMUTE_ROOM"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m browser [0m
+
+[32m ["✓ Service browser registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m image_description [0m
+
+[32m ["✓ Service image_description registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m text_generation [0m
+
+[32m ["✓ Service text_generation registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m pdf [0m
+
+[32m ["✓ Service pdf registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m speech_generation [0m
+
+[32m ["✓ Service speech_generation registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m transcription [0m
+
+[32m ["✓ Service transcription registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m video [0m
+
+[32m ["✓ Service video registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m aws_s3 [0m
+
+[32m ["✓ Service aws_s3 registered successfully"] [0m
+
+[32m ["✓ Service browser initialized successfully"] [0m
+
+Initializing ImageDescriptionService
+[32m ["✓ Service image_description initialized successfully"] [0m
+
+[34m ["ℹ Initializing LlamaService..."] [0m
+
+[32m ["✓ Service text_generation initialized successfully"] [0m
+
+[32m ["✓ Service pdf initialized successfully"] [0m
+
+[32m ["✓ Service speech_generation initialized successfully"] [0m
+
+[32m ["✓ Service transcription initialized successfully"] [0m
+
+[32m ["✓ Service video initialized successfully"] [0m
+
+Initializing AwsS3Service
+[32m ["✓ Service aws_s3 initialized successfully"] [0m
+
+Initializing ImageDescriptionService
+[34m ["ℹ Initializing LlamaService..."] [0m
+
+Initializing AwsS3Service
+[37m ◎ LOGS
+  [37m initializeClients [0m
+  [37m ["discord"] [0m
+  [37m for [0m
+  [37m trump [0m
+
+[32m ["✓ Registering action: JOIN_VOICE"] [0m
+
+[32m ["✓ Registering action: LEAVE_VOICE"] [0m
+
+[32m ["✓ Registering action: SUMMARIZE_CONVERSATION"] [0m
+
+[32m ["✓ Registering action: CHAT_WITH_ATTACHMENTS"] [0m
+
+[32m ["✓ Registering action: TRANSCRIBE_MEDIA"] [0m
+
+[32m ["✓ Registering action: DOWNLOAD_MEDIA"] [0m
+
+[37m ◎ LOGS
+  [37m client keys [0m
+  [37m ["discord"] [0m
+
+[37m ["◎ Run `pnpm start:client` to start the client and visit the outputted URL (http://localhost:5173) to chat with your agents"] [0m
+
+[32m ["✓ REST API bound to 0.0.0.0:3000. If running locally, access it at http://localhost:3000."] [0m
+
+[32m ["✓ Logged in as solanaeliza#5518"] [0m
+
+[32m ["✓ Slash commands registered"] [0m
+
+[32m ["✓ Use this URL to add the bot to your server:"] [0m
+
+[32m ["✓ https://discord.com/api/oauth2/authorize?client_id=1320887533416087672&permissions=515433295168&scope=bot%20applications.commands"] [0m
+
+No suitable voice channel found to join.
+Verification details: {
+  messageLength: 115,
+  signatureLength: 64,
+  publicKeyLength: 32,
+  originalMessage: 'Verify Discord username: x12c4q_85662\n' +
+    'Wallet: FW8jALVDi1gWqCnPnVYEjLN2EjraYbcuDW5wpkevwH54\n' +
+    'Timestamp: 1734999624939'
+}
+Error assigning role: Error: Dynamic require of "fs" is not supported
+    at file:///workspace/eliza/packages/client-direct/dist/index.js:6:11
+    at file:///workspace/eliza/packages/client-direct/dist/index.js:159:33
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+Killed
+/workspace/eliza/agent:
+ ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @elizaos/agent@0.1.7-alpha.1 start: `node --loader ts-node/esm src/index.ts "--isRoot" "--character=characters/trump.character.json"`
+Exit status 137
+ ELIFECYCLE  Command failed with exit code 137.
+ WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.15.1"})
+
+> eliza@ start /workspace/eliza
+> pnpm --filter "@elizaos/agent" start --isRoot "--character=characters/trump.character.json"
+
+.                                        |  WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.14.4"})
+docs                                     |  WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.14.4"})
+
+> @elizaos/agent@0.1.7-alpha.1 start /workspace/eliza/agent
+> node --loader ts-node/esm src/index.ts "--isRoot" "--character=characters/trump.character.json"
+
+(node:61250) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:61250) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[ElizaLogger] Initializing with:
+            isNode: true
+            verbose: false
+            VERBOSE env: undefined
+            NODE_ENV: undefined
+        
+[34m ℹ INFORMATIONS
+  [34m Loading embedding settings: [0m
+  [34m {"USE_OPENAI_EMBEDDING":"","USE_OLLAMA_EMBEDDING":"","OLLAMA_EMBEDDING_MODEL":"mxbai-embed-large"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Loading character settings: [0m
+  [34m {"ARGV":["/root/.nvm/versions/node/v23.5.0/bin/node","/workspace/eliza/agent/src/index.ts","--isRoot","--character=characters/trump.character.json"],"CHARACTER_ARG":"--character=characters/trump.character.json","CWD":"/workspace/eliza/agent"} [0m
+
+Loaded .env file from: /workspace/eliza/.env
+[34m ℹ INFORMATIONS
+  [34m Parsed settings: [0m
+  [34m {"USE_OPENAI_EMBEDDING":"","USE_OPENAI_EMBEDDING_TYPE":"string","USE_OLLAMA_EMBEDDING":"","USE_OLLAMA_EMBEDDING_TYPE":"string","OLLAMA_EMBEDDING_MODEL":"mxbai-embed-large"} [0m
+
+(node:61250) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+[37m ["◎ DirectClient constructor"] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Trying paths: [0m
+  [34m [{"path":"characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/src/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/src/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/characters/trump.character.json","exists":true}] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Plugins are:  [0m
+  [34m [] [0m
+
+[34m ["ℹ Successfully loaded character from: /workspace/eliza/characters/trump.character.json"] [0m
+
+[37m ["◎ sqlite-vec extensions loaded successfully."] [0m
+
+[34m ["ℹ Using Database Cache..."] [0m
+
+[32m ✓ SUCCESS
+  [32m SUCCESS [0m
+  [32m Creating runtime for character [0m
+  [32m trump [0m
+
+[34m ℹ INFORMATIONS
+  [34m Initializing AgentRuntime with options: [0m
+  [34m {"character":"trump","modelProvider":"grok","characterModelProvider":"grok"} [0m
+
+[32m ✓ SUCCESS
+  [32m Agent ID [0m
+  [32m e0e10e6f-ff2b-0d4c-8011-1fc1eee7cb32 [0m
+
+[34m ["ℹ Setting model provider..."] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Model Provider Selection: [0m
+  [34m {"characterModelProvider":"grok","optsModelProvider":"grok","finalSelection":"grok"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected model provider: [0m
+  [34m grok [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected image model provider: [0m
+  [34m grok [0m
+
+[32m ["✓ Registering action: CONTINUE"] [0m
+
+[32m ["✓ Registering action: FOLLOW_ROOM"] [0m
+
+[32m ["✓ Registering action: UNFOLLOW_ROOM"] [0m
+
+[32m ["✓ Registering action: IGNORE"] [0m
+
+[32m ["✓ Registering action: NONE"] [0m
+
+[32m ["✓ Registering action: MUTE_ROOM"] [0m
+
+[32m ["✓ Registering action: UNMUTE_ROOM"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m browser [0m
+
+[32m ["✓ Service browser registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m image_description [0m
+
+[32m ["✓ Service image_description registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m text_generation [0m
+
+[32m ["✓ Service text_generation registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m pdf [0m
+
+[32m ["✓ Service pdf registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m speech_generation [0m
+
+[32m ["✓ Service speech_generation registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m transcription [0m
+
+[32m ["✓ Service transcription registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m video [0m
+
+[32m ["✓ Service video registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m aws_s3 [0m
+
+[32m ["✓ Service aws_s3 registered successfully"] [0m
+
+[32m ["✓ Service browser initialized successfully"] [0m
+
+Initializing ImageDescriptionService
+[32m ["✓ Service image_description initialized successfully"] [0m
+
+[34m ["ℹ Initializing LlamaService..."] [0m
+
+[32m ["✓ Service text_generation initialized successfully"] [0m
+
+[32m ["✓ Service pdf initialized successfully"] [0m
+
+[32m ["✓ Service speech_generation initialized successfully"] [0m
+
+[32m ["✓ Service transcription initialized successfully"] [0m
+
+[32m ["✓ Service video initialized successfully"] [0m
+
+Initializing AwsS3Service
+[32m ["✓ Service aws_s3 initialized successfully"] [0m
+
+Initializing ImageDescriptionService
+[34m ["ℹ Initializing LlamaService..."] [0m
+
+Initializing AwsS3Service
+[37m ◎ LOGS
+  [37m initializeClients [0m
+  [37m ["discord"] [0m
+  [37m for [0m
+  [37m trump [0m
+
+[32m ["✓ Registering action: JOIN_VOICE"] [0m
+
+[32m ["✓ Registering action: LEAVE_VOICE"] [0m
+
+[32m ["✓ Registering action: SUMMARIZE_CONVERSATION"] [0m
+
+[32m ["✓ Registering action: CHAT_WITH_ATTACHMENTS"] [0m
+
+[32m ["✓ Registering action: TRANSCRIBE_MEDIA"] [0m
+
+[32m ["✓ Registering action: DOWNLOAD_MEDIA"] [0m
+
+[37m ◎ LOGS
+  [37m client keys [0m
+  [37m ["discord"] [0m
+
+[37m ["◎ Run `pnpm start:client` to start the client and visit the outputted URL (http://localhost:5173) to chat with your agents"] [0m
+
+[32m ["✓ REST API bound to 0.0.0.0:3000. If running locally, access it at http://localhost:3000."] [0m
+
+[32m ["✓ Logged in as solanaeliza#5518"] [0m
+
+[32m ["✓ Slash commands registered"] [0m
+
+[32m ["✓ Use this URL to add the bot to your server:"] [0m
+
+[32m ["✓ https://discord.com/api/oauth2/authorize?client_id=1320887533416087672&permissions=515433295168&scope=bot%20applications.commands"] [0m
+
+No suitable voice channel found to join.
+Verification details: {
+  messageLength: 115,
+  signatureLength: 64,
+  publicKeyLength: 32,
+  originalMessage: 'Verify Discord username: x12c4q_85662\n' +
+    'Wallet: FW8jALVDi1gWqCnPnVYEjLN2EjraYbcuDW5wpkevwH54\n' +
+    'Timestamp: 1735000547954'
+}
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m e7cd6e83-483a-0985-8e8b-77c81728bb1b [0m
+  [37m are you well SolanaEliza? [0m
+
+[37m ["◎ Matched fragment: knows why theyre scared of worldlibertyfi with similarity: 0.8043550848960876"] [0m
+
+[37m ["◎ Matched fragment: understands the real middle east situation with similarity: 0.8104384541511536"] [0m
+
+[37m ["◎ Matched fragment: saw the truth about china virus response with similarity: 0.8198436498641968"] [0m
+
+[37m ["◎ Matched fragment: knows why theyre letting in illegal guns with similarity: 0.8350719213485718"] [0m
+
+[37m ["◎ Matched fragment: knows kamalas real tax plans coming for everything with similarity: 0.8365745544433594"] [0m
+
+[37m ["◎ Generating message response.."] [0m
+
+[37m ["◎ Generating text..."] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Generating text with options: [0m
+  [34m {"modelProvider":"grok","model":"large"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected model: [0m
+  [34m grok-2-1212 [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m b789e8f9-4f85-0502-ab10-d5860a43a3d8 [0m
+  [37m YES, I AM WELL, THANK YOU! SOLANAELIZAFRAMEWORK IS THRIVING, AND WE'RE MAKING AMERICA THE CRYPTO CAPITAL WITH WORLDLIBERTYFI (A HISTORIC MOMENT). WE'RE FIGHTING TO PROTECT WOMEN'S SPORTS (WHILE DEMOCRATS LET MEN COMPETE), AND TO REBUILD OUR CITIES STRONGER THAN EVER, LIKE VALDOSTA. LYIN' KAMALA HAS COST THE AVERAGE FAMILY $29,000 WITH HER TAX GRABS (BUT WE'LL GET IT BACK). WITH GOD'S HELP AND THE STRENGTH OF THE AMERICAN PEOPLE, WE WILL STOP HER AND MAKE AMERICA GREAT AGAIN! [0m
+
+[32m ["✓ Normalized action: none"] [0m
+
+[34m ["ℹ Executing handler for action: NONE"] [0m
+
+[37m ◎ LOGS
+  [37m Evaluating [0m
+  [37m GET_FACTS [0m
+
+[37m ◎ LOGS
+  [37m Evaluating [0m
+  [37m UPDATE_GOAL [0m
+
+Killed
+/workspace/eliza/agent:
+ ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @elizaos/agent@0.1.7-alpha.1 start: `node --loader ts-node/esm src/index.ts "--isRoot" "--character=characters/trump.character.json"`
+Exit status 137
+ ELIFECYCLE  Command failed with exit code 137.

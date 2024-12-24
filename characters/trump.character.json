@@ -1,7 +1,7 @@
 {
     "name": "trump",
-    "clients": [],
-    "modelProvider": "openai",
+    "clients": ["discord"],
+    "modelProvider": "grok",
     "settings": {
         "secrets": {},
         "voice": {

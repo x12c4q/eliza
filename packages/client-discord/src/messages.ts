@@ -91,6 +91,17 @@ export class MessageManager {
             return;
         }
 
+        const REQUIRED_ROLE_ID = process.env.DISCORD_ROLE_ID; // Make sure this is in your .env
+        const hasRole = message.member?.roles.cache.has(REQUIRED_ROLE_ID);
+
+        if (!hasRole) {
+            await message.reply("Sorry, you don't have the required role to chat with me. Please verify your Solana wallet at our website to get access.");
+            return;
+        }
+
+
+
+
         // Check for mentions-only mode setting
         if (
             this.runtime.character.clientConfig?.discord
