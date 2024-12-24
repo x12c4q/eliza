@@ -29,3 +29,16 @@ ElizaConnectUC provides a secure and flexible system for managing access to spec
    - Enhanced agent interactions
    - Access to specialized commands
 
+
+### Try it out 
+
+Join the discord ElizaConnectUC https://discord.gg/WwsEePfk
+- Try to interact with agent 
+- If you donot have the chat role agent will let you know  
+- Then go to https://eliza-nu.vercel.app
+- Then select the agent
+- Then select 'claim role' on the left side bar
+- now Connect wallet
+- now enter discord username you joined the discord above with
+- Sign the message
+- If all is well you should receive a success message telling youm you have got the chat role
