@@ -1,4 +1,4 @@
-# Eliza 🤖
+# ElizaConnectUC 🤖
 
 <div align="center">
   <img src="https://gcdnb.pbrd.co/images/G2EAqMh6P5hs.png?o=1" alt="Eliza Banner" width="100%" />
