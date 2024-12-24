@@ -24,42 +24,8 @@ ElizaConnectUC provides a secure and flexible system for managing access to spec
 - Discord username binding to wallet addresses
 
 ### 🤖 Tiered Agent Access
-1. **Basic Tier** (No Authentication Required)
-   - Basic chat functionality
-   - Public commands
-   - General information queries
 
-2. **Verified Tier** (Wallet Connected)
+  **Verified Tier** (Wallet Connected)
    - Enhanced agent interactions
    - Access to specialized commands
-   - Document interaction capabilities
 
-3. **Premium Tier** (Verified + Special Roles)
-   - Advanced AI model access
-   - Custom agent configuration
-   - Premium features and commands
-
-## Implementation
-
-### Quick Start
-```typescript
-// 1. Connect wallet
-const { publicKey } = useWallet();
-
-// 2. Verify Discord username
-const messageText = `Verify Discord username: ${discordUsername}
-  \nWallet: ${publicKey.toBase58()}
-  \nTimestamp: ${Date.now()}`;
-
-// 3. Sign message
-const signature = await signMessage(messageText);
-
-// 4. Claim role
-await fetch("/api/claim-role", {
-  method: "POST",
-  body: JSON.stringify({
-    walletAddress: publicKey.toBase58(),
-    signature: signature,
-    discordUsername: discordUsername
-  })
-});
