@@ -14,7 +14,8 @@ import {
     validateCharacterConfig,
 } from "@elizaos/core";
 
-import { REST, Routes } from "discord.js";
+
+import { Client, GatewayIntentBits, REST, Routes } from "discord.js";
 import { DirectClient } from ".";
 // import { Buffer } from 'buffer'; // Add this import
 
@@ -178,14 +179,28 @@ export function createApiRouter(
                   const GUILD_ID = getEnvVariable("DISCORD_GUILD_ID");
                   const ROLE_ID = getEnvVariable("DISCORD_ROLE_ID");
 
-                  const rest = new REST({ version: "10" }).setToken(API_TOKEN);
+                  // Initialize Discord client with proper intents
+                  const client = new Client({
+                      intents: [
+                          GatewayIntentBits.Guilds,
+                          GatewayIntentBits.GuildMembers,
+                          GatewayIntentBits.GuildPresences,
+                      ]
+                  });
+
+                  // Login to Discord
+                  await client.login(API_TOKEN);
+
+                  // Wait for client to be ready
+                  await new Promise((resolve) => client.once('ready', resolve));
 
                   // 2. Find the user in the guild
-                  const guild = await rest.get(Routes.guild(GUILD_ID));
-                  const members = await rest.get(Routes.guildMembers(GUILD_ID));
+                  const guild = await client.guilds.fetch(GUILD_ID);
+                  const members = await guild.members.fetch();
                   const member = members.find(m => m.user.username === discordUsername);
 
                   if (!member) {
+                      await client.destroy(); // Cleanup
                       return res.status(404).json({
                           success: false,
                           error: "User not found in Discord server"
@@ -193,10 +208,13 @@ export function createApiRouter(
                   }
 
                   // 3. Assign the role
-                  await rest.put(Routes.guildMemberRole(GUILD_ID, member.user.id, ROLE_ID));
+                  await member.roles.add(ROLE_ID);
 
                   // 4. Store the wallet-discord mapping using cache instead of fs
                   await cache.set(`wallet_${walletAddress}`, member.user.id);
+
+                  // Cleanup
+                  await client.destroy();
 
                   return res.json({
                       success: true,
