@@ -41,4 +41,5 @@ Join the discord ElizaConnectUC https://discord.gg/WwsEePfk
 - now Connect wallet
 - now enter discord username you joined the discord above with
 - Sign the message
-- If all is well you should receive a success message telling youm you have got the chat role
+- If all is well you should receive a success message telling you that  you have received the chat role
+- Now if you back into the discord and try interacting with the agent (this is using xAI Grok it might be slow but this for demonstration purposes), it will respond and oyu can now converse with the agent. 
