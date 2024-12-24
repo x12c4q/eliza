@@ -1,7 +1,7 @@
 # Eliza 🤖
 
 <div align="center">
-  <img src="./docs/static/img/eliza_banner.jpg" alt="Eliza Banner" width="100%" />
+  <img src="https://gcdnb.pbrd.co/images/G2EAqMh6P5hs.png?o=1" alt="Eliza Banner" width="100%" />
 </div>
 
 <div align="center">
