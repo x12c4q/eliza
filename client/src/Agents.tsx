@@ -17,7 +17,7 @@ function Agents() {
             const data = await res.json();
             return data.agents as Agent[];
         },
-    });
+    }); //test
 
     return (
         <div className="min-h-screen flex flex-col items-center justify-center p-4">
