@@ -37,7 +37,7 @@ export function ClaimRole() {
       const signature = await signMessage(message);
 
       // Send to backend
-      const response = await fetch("https://e218b93f45b0.ngrok.app/claim-role", {
+      const response = await fetch("https://41d3329730bf.ngrok.app/claim-role", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
