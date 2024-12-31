@@ -5,6 +5,7 @@
 </div>
 
 # Specialized Agent Features
+CA: 8HGyAAB1yoM1ttS7pXjHMa3dukTFGQggnFFH3hJZgzQh
 
 ## Overview
 ElizaConnectUC provides a secure and flexible system for managing access to specialized agent features through wallet-based authentication and Discord role management. This system allows developers to gate specific bot functionalities while maintaining security and user experience.
