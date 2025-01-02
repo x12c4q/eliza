@@ -1773,3 +1773,528 @@ Initializing AwsS3Service
 [32m ["✓ https://discord.com/api/oauth2/authorize?client_id=1320887533416087672&permissions=515433295168&scope=bot%20applications.commands"] [0m
 
 No suitable voice channel found to join.
+ WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.15.2"})
+
+> eliza@ start /workspace/eliza
+> pnpm --filter "@elizaos/agent" start --isRoot "--character=characters/trump.character.json"
+
+.                                        |  WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.14.4"})
+docs                                     |  WARN  Unsupported engine: wanted: {"node":"23.3.0"} (current: {"node":"v23.5.0","pnpm":"9.14.4"})
+
+> @elizaos/agent@0.1.7-alpha.1 start /workspace/eliza/agent
+> node --loader ts-node/esm src/index.ts "--isRoot" "--character=characters/trump.character.json"
+
+(node:17036) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:17036) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[ElizaLogger] Initializing with:
+            isNode: true
+            verbose: false
+            VERBOSE env: undefined
+            NODE_ENV: undefined
+        
+[34m ℹ INFORMATIONS
+  [34m Loading embedding settings: [0m
+  [34m {"USE_OPENAI_EMBEDDING":"","USE_OLLAMA_EMBEDDING":"","OLLAMA_EMBEDDING_MODEL":"mxbai-embed-large"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Loading character settings: [0m
+  [34m {"ARGV":["/root/.nvm/versions/node/v23.5.0/bin/node","/workspace/eliza/agent/src/index.ts","--isRoot","--character=characters/trump.character.json"],"CHARACTER_ARG":"--character=characters/trump.character.json","CWD":"/workspace/eliza/agent"} [0m
+
+Loaded .env file from: /workspace/eliza/.env
+[34m ℹ INFORMATIONS
+  [34m Parsed settings: [0m
+  [34m {"USE_OPENAI_EMBEDDING":"","USE_OPENAI_EMBEDDING_TYPE":"string","USE_OLLAMA_EMBEDDING":"","USE_OLLAMA_EMBEDDING_TYPE":"string","OLLAMA_EMBEDDING_MODEL":"mxbai-embed-large"} [0m
+
+(node:17036) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+[37m ["◎ DirectClient constructor"] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Trying paths: [0m
+  [34m [{"path":"characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/src/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/src/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/agent/characters/trump.character.json","exists":false},{"path":"/workspace/eliza/characters/trump.character.json","exists":true}] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Plugins are:  [0m
+  [34m [] [0m
+
+[34m ["ℹ Successfully loaded character from: /workspace/eliza/characters/trump.character.json"] [0m
+
+[37m ["◎ sqlite-vec extensions loaded successfully."] [0m
+
+[34m ["ℹ Using Database Cache..."] [0m
+
+[32m ✓ SUCCESS
+  [32m SUCCESS [0m
+  [32m Creating runtime for character [0m
+  [32m trump [0m
+
+[34m ℹ INFORMATIONS
+  [34m Initializing AgentRuntime with options: [0m
+  [34m {"character":"trump","modelProvider":"grok","characterModelProvider":"grok"} [0m
+
+[32m ✓ SUCCESS
+  [32m Agent ID [0m
+  [32m e0e10e6f-ff2b-0d4c-8011-1fc1eee7cb32 [0m
+
+[34m ["ℹ Setting model provider..."] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Model Provider Selection: [0m
+  [34m {"characterModelProvider":"grok","optsModelProvider":"grok","finalSelection":"grok"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected model provider: [0m
+  [34m grok [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected image model provider: [0m
+  [34m grok [0m
+
+[32m ["✓ Registering action: CONTINUE"] [0m
+
+[32m ["✓ Registering action: FOLLOW_ROOM"] [0m
+
+[32m ["✓ Registering action: UNFOLLOW_ROOM"] [0m
+
+[32m ["✓ Registering action: IGNORE"] [0m
+
+[32m ["✓ Registering action: NONE"] [0m
+
+[32m ["✓ Registering action: MUTE_ROOM"] [0m
+
+[32m ["✓ Registering action: UNMUTE_ROOM"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m browser [0m
+
+[32m ["✓ Service browser registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m image_description [0m
+
+[32m ["✓ Service image_description registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m text_generation [0m
+
+[32m ["✓ Service text_generation registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m pdf [0m
+
+[32m ["✓ Service pdf registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m speech_generation [0m
+
+[32m ["✓ Service speech_generation registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m transcription [0m
+
+[32m ["✓ Service transcription registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m video [0m
+
+[32m ["✓ Service video registered successfully"] [0m
+
+[37m ◎ LOGS
+  [37m Registering service: [0m
+  [37m aws_s3 [0m
+
+[32m ["✓ Service aws_s3 registered successfully"] [0m
+
+[37m ["◎ Room e0e10e6f-ff2b-0d4c-8011-1fc1eee7cb32 created successfully."] [0m
+
+[32m ["✓ User trump created successfully."] [0m
+
+[32m ["✓ Service browser initialized successfully"] [0m
+
+Initializing ImageDescriptionService
+[32m ["✓ Service image_description initialized successfully"] [0m
+
+[34m ["ℹ Initializing LlamaService..."] [0m
+
+[32m ["✓ Service text_generation initialized successfully"] [0m
+
+[32m ["✓ Service pdf initialized successfully"] [0m
+
+[32m ["✓ Service speech_generation initialized successfully"] [0m
+
+[32m ["✓ Service transcription initialized successfully"] [0m
+
+[32m ["✓ Service video initialized successfully"] [0m
+
+Initializing AwsS3Service
+[32m ["✓ Service aws_s3 initialized successfully"] [0m
+
+Initializing ImageDescriptionService
+[34m ["ℹ Initializing LlamaService..."] [0m
+
+Initializing AwsS3Service
+[34m ℹ INFORMATIONS
+  [34m Processing knowledge for  [0m
+  [34m trump [0m
+  [34m  -  [0m
+  [34m knows EXACT cost to families under Kamala ($29,000) [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 21edc89d-2149-0fec-a787-fc0cb36154d9 [0m
+  [37m knows EXACT cost to families under Kamala ($29,000) [0m
+
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m acbc8129-af84-0e55-a47a-118994b2b229 [0m
+  [37m knows exact cost to families under kamala 29000 [0m
+
+[34m ℹ INFORMATIONS
+  [34m Processing knowledge for  [0m
+  [34m trump [0m
+  [34m  -  [0m
+  [34m understands REAL border numbers (worse than reported) [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 42251613-8e6b-0ef7-abcf-c8c04f750ff9 [0m
+  [37m understands REAL border numbers (worse than reported) [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 380038f6-ab78-09ba-856a-b48785229c54 [0m
+  [37m understands real border numbers worse than reported [0m
+
+[34m ℹ INFORMATIONS
+  [34m Processing knowledge for  [0m
+  [34m trump [0m
+  [34m  -  [0m
+  [34m saw what really happened in Minneapolis 2020 [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 8f688e68-9fad-0314-957b-1105669a3440 [0m
+  [37m saw what really happened in Minneapolis 2020 [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 13ed0e9e-4be6-0475-93e9-d48ec9ab41a4 [0m
+  [37m saw what really happened in minneapolis 2020 [0m
+
+[34m ℹ INFORMATIONS
+  [34m Processing knowledge for  [0m
+  [34m trump [0m
+  [34m  -  [0m
+  [34m remembers who begged for help (and when) [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 8344266d-b5a6-08ca-9c28-6c7323ef8179 [0m
+  [37m remembers who begged for help (and when) [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m d85d579b-9edb-0aa9-ad67-3caeea88d7f9 [0m
+  [37m remembers who begged for help and when [0m
+
+[34m ℹ INFORMATIONS
+  [34m Processing knowledge for  [0m
+  [34m trump [0m
+  [34m  -  [0m
+  [34m knows why Iran's president targeting us [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 4d8b0f45-4c9f-01d1-b74f-4fc1bcf0b795 [0m
+  [37m knows why Iran's president targeting us [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 01f03bb2-abea-02f6-b390-4ce17cc4e283 [0m
+  [37m knows why irans president targeting us [0m
+
+[34m ℹ INFORMATIONS
+  [34m Processing knowledge for  [0m
+  [34m trump [0m
+  [34m  -  [0m
+  [34m understands Secret Service allocation (and why they do it) [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m bea02e59-9f00-009f-9a4d-34f7439d371d [0m
+  [37m understands Secret Service allocation (and why they do it) [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m a6550ade-be3b-0f97-ba94-bf18603333fb [0m
+  [37m understands secret service allocation and why they do it [0m
+
+[34m ℹ INFORMATIONS
+  [34m Processing knowledge for  [0m
+  [34m trump [0m
+  [34m  -  [0m
+  [34m knows REAL rally numbers (they hide them) [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 30784cc7-cee9-0676-b842-c895c009a56d [0m
+  [37m knows REAL rally numbers (they hide them) [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 36177a65-2423-055d-a61f-483bda487749 [0m
+  [37m knows real rally numbers they hide them [0m
+
+[34m ℹ INFORMATIONS
+  [34m Processing knowledge for  [0m
+  [34m trump [0m
+  [34m  -  [0m
+  [34m saw the TRUTH about China Virus response [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 413dfe3d-e960-01e8-8e35-ba1748cad3e9 [0m
+  [37m saw the TRUTH about China Virus response [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 00d7f276-37c6-0dbe-8e5e-86621339dc07 [0m
+  [37m saw the truth about china virus response [0m
+
+[34m ℹ INFORMATIONS
+  [34m Processing knowledge for  [0m
+  [34m trump [0m
+  [34m  -  [0m
+  [34m understands states' rights better than anyone [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m afeaf89b-5766-07e6-a4f2-3611ffa3245e [0m
+  [37m understands states' rights better than anyone [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 9bbd1a0b-04ca-02f5-b145-98017408eeac [0m
+  [37m understands states rights better than anyone [0m
+
+[34m ℹ INFORMATIONS
+  [34m Processing knowledge for  [0m
+  [34m trump [0m
+  [34m  -  [0m
+  [34m knows why they're letting in illegal guns [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 7e2cf0c6-f9eb-0c28-9876-d6465cf64b56 [0m
+  [37m knows why they're letting in illegal guns [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 560bf50b-8e98-0681-a680-55a619eb5e27 [0m
+  [37m knows why theyre letting in illegal guns [0m
+
+[34m ℹ INFORMATIONS
+  [34m Processing knowledge for  [0m
+  [34m trump [0m
+  [34m  -  [0m
+  [34m remembers when America was AFFORDABLE [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m ea21e095-c3cd-0ca7-a348-7458654f9014 [0m
+  [37m remembers when America was AFFORDABLE [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 3795551f-d662-05e2-9d22-2bf63be950d0 [0m
+  [37m remembers when america was affordable [0m
+
+[34m ℹ INFORMATIONS
+  [34m Processing knowledge for  [0m
+  [34m trump [0m
+  [34m  -  [0m
+  [34m understands the REAL election interference [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 2df2671d-92d1-0e96-8fc0-33feff30fbe6 [0m
+  [37m understands the REAL election interference [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 57d2d43a-75a0-0178-88c8-eff04a6877e6 [0m
+  [37m understands the real election interference [0m
+
+[34m ℹ INFORMATIONS
+  [34m Processing knowledge for  [0m
+  [34m trump [0m
+  [34m  -  [0m
+  [34m knows why they're scared of WorldLibertyFi [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 24299f96-1223-0350-93b3-5eb101b55108 [0m
+  [37m knows why they're scared of WorldLibertyFi [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m b91e3e5a-eb44-0a3a-be60-fe790f1ff098 [0m
+  [37m knows why theyre scared of worldlibertyfi [0m
+
+[34m ℹ INFORMATIONS
+  [34m Processing knowledge for  [0m
+  [34m trump [0m
+  [34m  -  [0m
+  [34m saw what they did to women's sports [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m bdef121a-0708-08f2-81b9-a457447079a6 [0m
+  [37m saw what they did to women's sports [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 24a3ffd1-235e-0eee-929b-8c3401fea3b6 [0m
+  [37m saw what they did to womens sports [0m
+
+[34m ℹ INFORMATIONS
+  [34m Processing knowledge for  [0m
+  [34m trump [0m
+  [34m  -  [0m
+  [34m understands the REAL Middle East situation [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m f9332740-d0ee-0d99-b3ab-7e52c3ed75af [0m
+  [37m understands the REAL Middle East situation [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 9df1d1e4-6755-0c0e-b8b1-d23cf203e403 [0m
+  [37m understands the real middle east situation [0m
+
+[34m ℹ INFORMATIONS
+  [34m Processing knowledge for  [0m
+  [34m trump [0m
+  [34m  -  [0m
+  [34m knows why missiles flying everywhere now [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m a02c0239-cf35-0c58-83d2-8d61c87aca62 [0m
+  [37m knows why missiles flying everywhere now [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m ea7e899c-0373-0031-a05d-4b8344eff126 [0m
+  [37m knows why missiles flying everywhere now [0m
+
+[34m ℹ INFORMATIONS
+  [34m Processing knowledge for  [0m
+  [34m trump [0m
+  [34m  -  [0m
+  [34m remembers perfect peace under Trump presidency [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 61475e59-59f1-0006-9dfb-5ebbeb08c545 [0m
+  [37m remembers perfect peace under Trump presidency [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m cc6e06e0-2e40-047d-b2c0-6443d1831404 [0m
+  [37m remembers perfect peace under trump presidency [0m
+
+[34m ℹ INFORMATIONS
+  [34m Processing knowledge for  [0m
+  [34m trump [0m
+  [34m  -  [0m
+  [34m understands Democrat election strategy (letting in MILLIONS) [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m d0528a8b-8564-0385-967c-363b71486d62 [0m
+  [37m understands Democrat election strategy (letting in MILLIONS) [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m 783a6595-bb8c-0913-832c-243a65aa94b8 [0m
+  [37m understands democrat election strategy letting in millions [0m
+
+[34m ℹ INFORMATIONS
+  [34m Processing knowledge for  [0m
+  [34m trump [0m
+  [34m  -  [0m
+  [34m knows Kamala's REAL tax plans (coming for everything) [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m a27de63e-ba98-0148-80ac-cbe70b8715f6 [0m
+  [37m knows Kamala's REAL tax plans (coming for everything) [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m dc5b49db-37aa-07e8-a3c2-710d99482366 [0m
+  [37m knows kamalas real tax plans coming for everything [0m
+
+[34m ℹ INFORMATIONS
+  [34m Processing knowledge for  [0m
+  [34m trump [0m
+  [34m  -  [0m
+  [34m saw what they did to Minneapolis (and other cities) [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m d943101d-17fd-0c18-a675-9b279afc6056 [0m
+  [37m saw what they did to Minneapolis (and other cities) [0m
+
+[37m ◎ LOGS
+  [37m Creating Memory [0m
+  [37m ecf03b45-71fa-0f92-9f01-5e4907a668fc [0m
+  [37m saw what they did to minneapolis and other cities [0m
+
+[37m ◎ LOGS
+  [37m initializeClients [0m
+  [37m ["discord"] [0m
+  [37m for [0m
+  [37m trump [0m
+
+[32m ["✓ Registering action: JOIN_VOICE"] [0m
+
+[32m ["✓ Registering action: LEAVE_VOICE"] [0m
+
+[32m ["✓ Registering action: SUMMARIZE_CONVERSATION"] [0m
+
+[32m ["✓ Registering action: CHAT_WITH_ATTACHMENTS"] [0m
+
+[32m ["✓ Registering action: TRANSCRIBE_MEDIA"] [0m
+
+[32m ["✓ Registering action: DOWNLOAD_MEDIA"] [0m
+
+[37m ◎ LOGS
+  [37m client keys [0m
+  [37m ["discord"] [0m
+
+[37m ["◎ Run `pnpm start:client` to start the client and visit the outputted URL (http://localhost:5173) to chat with your agents"] [0m
+
+[32m ["✓ REST API bound to 0.0.0.0:3000. If running locally, access it at http://localhost:3000."] [0m
+
+[32m ["✓ Logged in as solanaeliza#5518"] [0m
+
+[32m ["✓ Slash commands registered"] [0m
+
+[32m ["✓ Use this URL to add the bot to your server:"] [0m
+
+[32m ["✓ https://discord.com/api/oauth2/authorize?client_id=1320887533416087672&permissions=515433295168&scope=bot%20applications.commands"] [0m
+
+No suitable voice channel found to join.

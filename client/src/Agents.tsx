@@ -13,7 +13,7 @@ function Agents() {
     const { data: agents, isLoading } = useQuery({
         queryKey: ["agents"],
         queryFn: async () => {
-            const res = await fetch("https://55752ba1f263.ngrok.app/agents");
+            const res = await fetch("https://aec8ef01eaaa.ngrok.app/agents");
             const data = await res.json();
             return data.agents as Agent[];
         },
